@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://services.pucpsaludable.pucp.edu.pe/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="PlanAlimentario" targetNamespace="http://services.pucpsaludable.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://ws.pucpsaludable.ml:8080/pucpsaludableWebServices/PlanAlimentario?xsd=1" namespace="http://services.pucpsaludable.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="planAlimentarioAlumno">
+    <part name="parameters" element="tns:planAlimentarioAlumno" />
+  </message>
+  <message name="planAlimentarioAlumnoResponse">
+    <part name="parameters" element="tns:planAlimentarioAlumnoResponse" />
+  </message>
+  <message name="recetaPorPresetID">
+    <part name="parameters" element="tns:recetaPorPresetID" />
+  </message>
+  <message name="recetaPorPresetIDResponse">
+    <part name="parameters" element="tns:recetaPorPresetIDResponse" />
+  </message>
+  <message name="ingredientesPreset">
+    <part name="parameters" element="tns:ingredientesPreset" />
+  </message>
+  <message name="ingredientesPresetResponse">
+    <part name="parameters" element="tns:ingredientesPresetResponse" />
+  </message>
+  <message name="planAlimentarioAlumnoPreset">
+    <part name="parameters" element="tns:planAlimentarioAlumnoPreset" />
+  </message>
+  <message name="planAlimentarioAlumnoPresetResponse">
+    <part name="parameters" element="tns:planAlimentarioAlumnoPresetResponse" />
+  </message>
+  <message name="presetsPorTipoC">
+    <part name="parameters" element="tns:presetsPorTipoC" />
+  </message>
+  <message name="presetsPorTipoCResponse">
+    <part name="parameters" element="tns:presetsPorTipoCResponse" />
+  </message>
+  <message name="eliminarPlanAlimAlumno">
+    <part name="parameters" element="tns:eliminarPlanAlimAlumno" />
+  </message>
+  <message name="eliminarPlanAlimAlumnoResponse">
+    <part name="parameters" element="tns:eliminarPlanAlimAlumnoResponse" />
+  </message>
+  <message name="generarIngredientesCompra">
+    <part name="parameters" element="tns:generarIngredientesCompra" />
+  </message>
+  <message name="generarIngredientesCompraResponse">
+    <part name="parameters" element="tns:generarIngredientesCompraResponse" />
+  </message>
+  <message name="modificarPlanAlumno">
+    <part name="parameters" element="tns:modificarPlanAlumno" />
+  </message>
+  <message name="modificarPlanAlumnoResponse">
+    <part name="parameters" element="tns:modificarPlanAlumnoResponse" />
+  </message>
+  <message name="generarNuevoPlanAlumno">
+    <part name="parameters" element="tns:generarNuevoPlanAlumno" />
+  </message>
+  <message name="generarNuevoPlanAlumnoResponse">
+    <part name="parameters" element="tns:generarNuevoPlanAlumnoResponse" />
+  </message>
+  <message name="insertarNuevoPlan">
+    <part name="parameters" element="tns:insertarNuevoPlan" />
+  </message>
+  <message name="insertarNuevoPlanResponse">
+    <part name="parameters" element="tns:insertarNuevoPlanResponse" />
+  </message>
+  <portType name="PlanAlimentarioService">
+    <operation name="planAlimentarioAlumno">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/PlanAlimentarioService/planAlimentarioAlumnoRequest" message="tns:planAlimentarioAlumno" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/PlanAlimentarioService/planAlimentarioAlumnoResponse" message="tns:planAlimentarioAlumnoResponse" />
+    </operation>
+    <operation name="recetaPorPresetID">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/PlanAlimentarioService/recetaPorPresetIDRequest" message="tns:recetaPorPresetID" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/PlanAlimentarioService/recetaPorPresetIDResponse" message="tns:recetaPorPresetIDResponse" />
+    </operation>
+    <operation name="ingredientesPreset">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/PlanAlimentarioService/ingredientesPresetRequest" message="tns:ingredientesPreset" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/PlanAlimentarioService/ingredientesPresetResponse" message="tns:ingredientesPresetResponse" />
+    </operation>
+    <operation name="planAlimentarioAlumnoPreset">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/PlanAlimentarioService/planAlimentarioAlumnoPresetRequest" message="tns:planAlimentarioAlumnoPreset" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/PlanAlimentarioService/planAlimentarioAlumnoPresetResponse" message="tns:planAlimentarioAlumnoPresetResponse" />
+    </operation>
+    <operation name="presetsPorTipoC">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/PlanAlimentarioService/presetsPorTipoCRequest" message="tns:presetsPorTipoC" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/PlanAlimentarioService/presetsPorTipoCResponse" message="tns:presetsPorTipoCResponse" />
+    </operation>
+    <operation name="eliminarPlanAlimAlumno">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/PlanAlimentarioService/eliminarPlanAlimAlumnoRequest" message="tns:eliminarPlanAlimAlumno" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/PlanAlimentarioService/eliminarPlanAlimAlumnoResponse" message="tns:eliminarPlanAlimAlumnoResponse" />
+    </operation>
+    <operation name="generarIngredientesCompra">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/PlanAlimentarioService/generarIngredientesCompraRequest" message="tns:generarIngredientesCompra" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/PlanAlimentarioService/generarIngredientesCompraResponse" message="tns:generarIngredientesCompraResponse" />
+    </operation>
+    <operation name="modificarPlanAlumno">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/PlanAlimentarioService/modificarPlanAlumnoRequest" message="tns:modificarPlanAlumno" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/PlanAlimentarioService/modificarPlanAlumnoResponse" message="tns:modificarPlanAlumnoResponse" />
+    </operation>
+    <operation name="generarNuevoPlanAlumno">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/PlanAlimentarioService/generarNuevoPlanAlumnoRequest" message="tns:generarNuevoPlanAlumno" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/PlanAlimentarioService/generarNuevoPlanAlumnoResponse" message="tns:generarNuevoPlanAlumnoResponse" />
+    </operation>
+    <operation name="insertarNuevoPlan">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/PlanAlimentarioService/insertarNuevoPlanRequest" message="tns:insertarNuevoPlan" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/PlanAlimentarioService/insertarNuevoPlanResponse" message="tns:insertarNuevoPlanResponse" />
+    </operation>
+  </portType>
+  <binding name="PlanAlimentarioServicePortBinding" type="tns:PlanAlimentarioService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="planAlimentarioAlumno">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="recetaPorPresetID">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ingredientesPreset">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="planAlimentarioAlumnoPreset">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="presetsPorTipoC">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarPlanAlimAlumno">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="generarIngredientesCompra">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarPlanAlumno">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="generarNuevoPlanAlumno">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarNuevoPlan">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="PlanAlimentario">
+    <port name="PlanAlimentarioServicePort" binding="tns:PlanAlimentarioServicePortBinding">
+      <soap:address location="http://ws.pucpsaludable.ml:8080/pucpsaludableWebServices/PlanAlimentario" />
+    </port>
+  </service>
+</definitions>

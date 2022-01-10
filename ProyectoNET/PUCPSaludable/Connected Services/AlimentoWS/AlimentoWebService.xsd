@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.pucpsaludable.pucp.edu.pe/" targetNamespace="http://services.pucpsaludable.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="adquirirAlimento" type="tns:adquirirAlimento" />
+  <xs:element name="adquirirAlimentoResponse" type="tns:adquirirAlimentoResponse" />
+  <xs:element name="eliminarAlimento" type="tns:eliminarAlimento" />
+  <xs:element name="eliminarAlimentoResponse" type="tns:eliminarAlimentoResponse" />
+  <xs:element name="filtrarPorPreferencia" type="tns:filtrarPorPreferencia" />
+  <xs:element name="filtrarPorPreferenciaResponse" type="tns:filtrarPorPreferenciaResponse" />
+  <xs:element name="insertarAlimento" type="tns:insertarAlimento" />
+  <xs:element name="insertarAlimentoResponse" type="tns:insertarAlimentoResponse" />
+  <xs:element name="modificarAlimento" type="tns:modificarAlimento" />
+  <xs:element name="modificarAlimentoResponse" type="tns:modificarAlimentoResponse" />
+  <xs:complexType name="filtrarPorPreferencia">
+    <xs:sequence>
+      <xs:element name="alumno" type="xs:int" />
+      <xs:element name="pref" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="filtrarPorPreferenciaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:alimento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="alimento">
+    <xs:sequence>
+      <xs:element name="fid_alumno" type="xs:int" />
+      <xs:element name="fid_ingrediente" type="xs:int" />
+      <xs:element name="preferencia" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarAlimento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="alim" type="tns:alimento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarAlimentoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarAlimento">
+    <xs:sequence>
+      <xs:element name="idAlumno" type="xs:int" />
+      <xs:element name="idIngred" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarAlimentoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarAlimento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="alim" type="tns:alimento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarAlimentoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="adquirirAlimento">
+    <xs:sequence>
+      <xs:element name="id_alumno" type="xs:int" />
+      <xs:element name="id_ingrediente" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="adquirirAlimentoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:alimento" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

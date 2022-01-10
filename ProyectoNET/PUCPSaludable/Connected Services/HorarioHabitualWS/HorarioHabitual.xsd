@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.pucpsaludable.pucp.edu.pe/" targetNamespace="http://services.pucpsaludable.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="insertarHorarioHabitual" type="tns:insertarHorarioHabitual" />
+  <xs:element name="insertarHorarioHabitualResponse" type="tns:insertarHorarioHabitualResponse" />
+  <xs:element name="modificarHorarioHabitual" type="tns:modificarHorarioHabitual" />
+  <xs:element name="modificarHorarioHabitualResponse" type="tns:modificarHorarioHabitualResponse" />
+  <xs:element name="obtenerHorarioHabitual" type="tns:obtenerHorarioHabitual" />
+  <xs:element name="obtenerHorarioHabitualResponse" type="tns:obtenerHorarioHabitualResponse" />
+  <xs:complexType name="obtenerHorarioHabitual">
+    <xs:sequence>
+      <xs:element name="id_alumno" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerHorarioHabitualResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:horarioHabitual" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="horarioHabitual">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="acostarse" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="cena" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="comida" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="desayuno" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="despertarse" type="xs:dateTime" />
+      <xs:element name="fid_alumno" type="xs:int" />
+      <xs:element minOccurs="0" name="mediaManana" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="merienda" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarHorarioHabitual">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="horarioHab" type="tns:horarioHabitual" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarHorarioHabitualResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarHorarioHabitual">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="horarioHab" type="tns:horarioHabitual" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarHorarioHabitualResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

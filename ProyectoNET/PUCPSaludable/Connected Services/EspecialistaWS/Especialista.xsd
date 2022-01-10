@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.pucpsaludable.pucp.edu.pe/" targetNamespace="http://services.pucpsaludable.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="agregarMensaje" type="tns:agregarMensaje" />
+  <xs:element name="agregarMensajeResponse" type="tns:agregarMensajeResponse" />
+  <xs:element name="agregarVideo" type="tns:agregarVideo" />
+  <xs:element name="agregarVideoResponse" type="tns:agregarVideoResponse" />
+  <xs:element name="listarMensajes" type="tns:listarMensajes" />
+  <xs:element name="listarMensajesResponse" type="tns:listarMensajesResponse" />
+  <xs:element name="listarVideos" type="tns:listarVideos" />
+  <xs:element name="listarVideosResponse" type="tns:listarVideosResponse" />
+  <xs:element name="mensajeEspecialistaPorID" type="tns:mensajeEspecialistaPorID" />
+  <xs:element name="mensajeEspecialistaPorIDResponse" type="tns:mensajeEspecialistaPorIDResponse" />
+  <xs:element name="videoEspecialistaPorID" type="tns:videoEspecialistaPorID" />
+  <xs:element name="videoEspecialistaPorIDResponse" type="tns:videoEspecialistaPorIDResponse" />
+  <xs:complexType name="agregarMensaje">
+    <xs:sequence>
+      <xs:element name="id_especialista" type="xs:int" />
+      <xs:element minOccurs="0" name="tituloMensaje" type="xs:string" />
+      <xs:element minOccurs="0" name="mensajeMensaje" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="agregarMensajeResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="agregarVideo">
+    <xs:sequence>
+      <xs:element name="id_especialista" type="xs:int" />
+      <xs:element minOccurs="0" name="URL_video" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="agregarVideoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="videoEspecialistaPorID">
+    <xs:sequence>
+      <xs:element name="id_especialista" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="videoEspecialistaPorIDResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarMensajes">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarMensajesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mensajeEspecialistaPorID">
+    <xs:sequence>
+      <xs:element name="id_especialista" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mensajeEspecialistaPorIDResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarVideos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarVideosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

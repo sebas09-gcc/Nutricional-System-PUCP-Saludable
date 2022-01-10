@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.pucpsaludable.pucp.edu.pe/" targetNamespace="http://services.pucpsaludable.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="insertarCumplimientoRutinaAlimentaria" type="tns:insertarCumplimientoRutinaAlimentaria" />
+  <xs:element name="insertarCumplimientoRutinaAlimentariaResponse" type="tns:insertarCumplimientoRutinaAlimentariaResponse" />
+  <xs:element name="listarCumplimientoRutinaAlimentariaxAlumno" type="tns:listarCumplimientoRutinaAlimentariaxAlumno" />
+  <xs:element name="listarCumplimientoRutinaAlimentariaxAlumnoResponse" type="tns:listarCumplimientoRutinaAlimentariaxAlumnoResponse" />
+  <xs:element name="listarCumplimientoRutinaAlimentariaxAlumnoyFecha" type="tns:listarCumplimientoRutinaAlimentariaxAlumnoyFecha" />
+  <xs:element name="listarCumplimientoRutinaAlimentariaxAlumnoyFechaResponse" type="tns:listarCumplimientoRutinaAlimentariaxAlumnoyFechaResponse" />
+  <xs:element name="listarPlanAlimentarioNombreRecetasxAlumnoyFecha" type="tns:listarPlanAlimentarioNombreRecetasxAlumnoyFecha" />
+  <xs:element name="listarPlanAlimentarioNombreRecetasxAlumnoyFechaResponse" type="tns:listarPlanAlimentarioNombreRecetasxAlumnoyFechaResponse" />
+  <xs:element name="modificarCumplimientoRutinaAlimentaria" type="tns:modificarCumplimientoRutinaAlimentaria" />
+  <xs:element name="modificarCumplimientoRutinaAlimentariaResponse" type="tns:modificarCumplimientoRutinaAlimentariaResponse" />
+  <xs:complexType name="listarPlanAlimentarioNombreRecetasxAlumnoyFecha">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+      <xs:element minOccurs="0" name="arg1" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPlanAlimentarioNombreRecetasxAlumnoyFechaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cumplimientoRutina" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cumplimientoRutina">
+    <xs:sequence>
+      <xs:element name="cumplio" type="xs:int" />
+      <xs:element name="dia" type="xs:int" />
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element name="fid_alumno" type="xs:int" />
+      <xs:element name="fid_taller" type="xs:int" />
+      <xs:element name="id_cumplimientoRutina" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreReceta" type="xs:string" />
+      <xs:element name="tipoComida" type="xs:int" />
+      <xs:element name="tipoRutina" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarCumplimientoRutinaAlimentaria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:cumplimientoRutina" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarCumplimientoRutinaAlimentariaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCumplimientoRutinaAlimentariaxAlumno">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCumplimientoRutinaAlimentariaxAlumnoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cumplimientoRutina" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarCumplimientoRutinaAlimentaria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:cumplimientoRutina" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarCumplimientoRutinaAlimentariaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCumplimientoRutinaAlimentariaxAlumnoyFecha">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+      <xs:element minOccurs="0" name="arg1" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCumplimientoRutinaAlimentariaxAlumnoyFechaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cumplimientoRutina" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

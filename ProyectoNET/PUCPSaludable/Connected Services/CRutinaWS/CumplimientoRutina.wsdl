@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://services.pucpsaludable.pucp.edu.pe/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="CumplimientoRutina" targetNamespace="http://services.pucpsaludable.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://ws.pucpsaludable.ml:8080/pucpsaludableWebServices/CumplimientoRutina?xsd=1" namespace="http://services.pucpsaludable.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="listarCumplimientoRutinaAlimentariaxAlumno">
+    <part name="parameters" element="tns:listarCumplimientoRutinaAlimentariaxAlumno" />
+  </message>
+  <message name="listarCumplimientoRutinaAlimentariaxAlumnoResponse">
+    <part name="parameters" element="tns:listarCumplimientoRutinaAlimentariaxAlumnoResponse" />
+  </message>
+  <message name="insertarCumplimientoRutinaAlimentaria">
+    <part name="parameters" element="tns:insertarCumplimientoRutinaAlimentaria" />
+  </message>
+  <message name="insertarCumplimientoRutinaAlimentariaResponse">
+    <part name="parameters" element="tns:insertarCumplimientoRutinaAlimentariaResponse" />
+  </message>
+  <message name="modificarCumplimientoRutinaAlimentaria">
+    <part name="parameters" element="tns:modificarCumplimientoRutinaAlimentaria" />
+  </message>
+  <message name="modificarCumplimientoRutinaAlimentariaResponse">
+    <part name="parameters" element="tns:modificarCumplimientoRutinaAlimentariaResponse" />
+  </message>
+  <message name="listarCumplimientoRutinaAlimentariaxAlumnoyFecha">
+    <part name="parameters" element="tns:listarCumplimientoRutinaAlimentariaxAlumnoyFecha" />
+  </message>
+  <message name="listarCumplimientoRutinaAlimentariaxAlumnoyFechaResponse">
+    <part name="parameters" element="tns:listarCumplimientoRutinaAlimentariaxAlumnoyFechaResponse" />
+  </message>
+  <message name="listarPlanAlimentarioNombreRecetasxAlumnoyFecha">
+    <part name="parameters" element="tns:listarPlanAlimentarioNombreRecetasxAlumnoyFecha" />
+  </message>
+  <message name="listarPlanAlimentarioNombreRecetasxAlumnoyFechaResponse">
+    <part name="parameters" element="tns:listarPlanAlimentarioNombreRecetasxAlumnoyFechaResponse" />
+  </message>
+  <portType name="CumplimientoRutinaService">
+    <operation name="listarCumplimientoRutinaAlimentariaxAlumno">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/CumplimientoRutinaService/listarCumplimientoRutinaAlimentariaxAlumnoRequest" message="tns:listarCumplimientoRutinaAlimentariaxAlumno" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/CumplimientoRutinaService/listarCumplimientoRutinaAlimentariaxAlumnoResponse" message="tns:listarCumplimientoRutinaAlimentariaxAlumnoResponse" />
+    </operation>
+    <operation name="insertarCumplimientoRutinaAlimentaria">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/CumplimientoRutinaService/insertarCumplimientoRutinaAlimentariaRequest" message="tns:insertarCumplimientoRutinaAlimentaria" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/CumplimientoRutinaService/insertarCumplimientoRutinaAlimentariaResponse" message="tns:insertarCumplimientoRutinaAlimentariaResponse" />
+    </operation>
+    <operation name="modificarCumplimientoRutinaAlimentaria">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/CumplimientoRutinaService/modificarCumplimientoRutinaAlimentariaRequest" message="tns:modificarCumplimientoRutinaAlimentaria" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/CumplimientoRutinaService/modificarCumplimientoRutinaAlimentariaResponse" message="tns:modificarCumplimientoRutinaAlimentariaResponse" />
+    </operation>
+    <operation name="listarCumplimientoRutinaAlimentariaxAlumnoyFecha">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/CumplimientoRutinaService/listarCumplimientoRutinaAlimentariaxAlumnoyFechaRequest" message="tns:listarCumplimientoRutinaAlimentariaxAlumnoyFecha" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/CumplimientoRutinaService/listarCumplimientoRutinaAlimentariaxAlumnoyFechaResponse" message="tns:listarCumplimientoRutinaAlimentariaxAlumnoyFechaResponse" />
+    </operation>
+    <operation name="listarPlanAlimentarioNombreRecetasxAlumnoyFecha">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/CumplimientoRutinaService/listarPlanAlimentarioNombreRecetasxAlumnoyFechaRequest" message="tns:listarPlanAlimentarioNombreRecetasxAlumnoyFecha" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/CumplimientoRutinaService/listarPlanAlimentarioNombreRecetasxAlumnoyFechaResponse" message="tns:listarPlanAlimentarioNombreRecetasxAlumnoyFechaResponse" />
+    </operation>
+  </portType>
+  <binding name="CumplimientoRutinaServicePortBinding" type="tns:CumplimientoRutinaService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarCumplimientoRutinaAlimentariaxAlumno">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarCumplimientoRutinaAlimentaria">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarCumplimientoRutinaAlimentaria">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCumplimientoRutinaAlimentariaxAlumnoyFecha">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPlanAlimentarioNombreRecetasxAlumnoyFecha">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="CumplimientoRutina">
+    <port name="CumplimientoRutinaServicePort" binding="tns:CumplimientoRutinaServicePortBinding">
+      <soap:address location="http://ws.pucpsaludable.ml:8080/pucpsaludableWebServices/CumplimientoRutina" />
+    </port>
+  </service>
+</definitions>

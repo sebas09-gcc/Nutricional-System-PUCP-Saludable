@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.pucpsaludable.pucp.edu.pe/" targetNamespace="http://services.pucpsaludable.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="eliminarIngre" type="tns:eliminarIngre" />
+  <xs:element name="eliminarIngreResponse" type="tns:eliminarIngreResponse" />
+  <xs:element name="insertarIngre" type="tns:insertarIngre" />
+  <xs:element name="insertarIngreResponse" type="tns:insertarIngreResponse" />
+  <xs:element name="listarIngredientesNoClasificados" type="tns:listarIngredientesNoClasificados" />
+  <xs:element name="listarIngredientesNoClasificadosResponse" type="tns:listarIngredientesNoClasificadosResponse" />
+  <xs:element name="listarIngredientesNombre" type="tns:listarIngredientesNombre" />
+  <xs:element name="listarIngredientesNombreResponse" type="tns:listarIngredientesNombreResponse" />
+  <xs:element name="listarIngredientesPrefAl" type="tns:listarIngredientesPrefAl" />
+  <xs:element name="listarIngredientesPrefAlResponse" type="tns:listarIngredientesPrefAlResponse" />
+  <xs:element name="listarIngredientesPreset" type="tns:listarIngredientesPreset" />
+  <xs:element name="listarIngredientesPresetResponse" type="tns:listarIngredientesPresetResponse" />
+  <xs:element name="listarIngredientesTodos" type="tns:listarIngredientesTodos" />
+  <xs:element name="listarIngredientesTodosResponse" type="tns:listarIngredientesTodosResponse" />
+  <xs:element name="modificarIngre" type="tns:modificarIngre" />
+  <xs:element name="modificarIngreResponse" type="tns:modificarIngreResponse" />
+  <xs:complexType name="modificarIngre">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ingred" type="tns:ingrediente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ingrediente">
+    <xs:sequence>
+      <xs:element name="azucar" type="xs:boolean" />
+      <xs:element name="cantidad" type="xs:double" />
+      <xs:element minOccurs="0" name="detalle" type="xs:string" />
+      <xs:element name="estado" type="xs:boolean" />
+      <xs:element name="grasasSaturadas" type="xs:boolean" />
+      <xs:element name="grasasTrans" type="xs:boolean" />
+      <xs:element name="idIngrediente" type="xs:int" />
+      <xs:element name="kcal" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element name="sodio" type="xs:boolean" />
+      <xs:element minOccurs="0" name="unidad" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarIngreResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarIngre">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ingred" type="tns:ingrediente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarIngreResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarIngredientesPreset">
+    <xs:sequence>
+      <xs:element name="idPreset" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarIngredientesPresetResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ingrediente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarIngredientesPrefAl">
+    <xs:sequence>
+      <xs:element name="idAlumno" type="xs:int" />
+      <xs:element name="preferencia" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarIngredientesPrefAlResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ingrediente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarIngredientesTodos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarIngredientesTodosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ingrediente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarIngre">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ingred" type="tns:ingrediente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarIngreResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarIngredientesNoClasificados">
+    <xs:sequence>
+      <xs:element name="idAlumno" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarIngredientesNoClasificadosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ingrediente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarIngredientesNombre">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarIngredientesNombreResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ingrediente" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

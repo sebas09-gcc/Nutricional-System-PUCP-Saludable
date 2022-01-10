@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.pucpsaludable.pucp.edu.pe/" targetNamespace="http://services.pucpsaludable.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="eliminarHorariosAnteriores" type="tns:eliminarHorariosAnteriores" />
+  <xs:element name="eliminarHorariosAnterioresResponse" type="tns:eliminarHorariosAnterioresResponse" />
+  <xs:element name="insertar" type="tns:insertar" />
+  <xs:element name="insertarResponse" type="tns:insertarResponse" />
+  <xs:element name="listarPorEspec" type="tns:listarPorEspec" />
+  <xs:element name="listarPorEspecResponse" type="tns:listarPorEspecResponse" />
+  <xs:complexType name="insertar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:horario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="horario">
+    <xs:sequence>
+      <xs:element name="diaSemana" type="xs:int" />
+      <xs:element name="estado" type="xs:int" />
+      <xs:element minOccurs="0" name="fechaHoraRegistro" type="xs:dateTime" />
+      <xs:element name="fid_especialista" type="xs:int" />
+      <xs:element minOccurs="0" name="horaFin" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="horarioInicio" type="xs:dateTime" />
+      <xs:element name="id_horario" type="xs:int" />
+      <xs:element name="id_taller" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarHorariosAnteriores">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarHorariosAnterioresResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPorEspec">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPorEspecResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:horario" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

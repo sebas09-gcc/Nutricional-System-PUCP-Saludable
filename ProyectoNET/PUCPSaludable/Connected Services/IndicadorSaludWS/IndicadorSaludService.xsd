@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.pucpsaludable.pucp.edu.pe/" targetNamespace="http://services.pucpsaludable.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="adquirirIndicadorSalud" type="tns:adquirirIndicadorSalud" />
+  <xs:element name="adquirirIndicadorSaludResponse" type="tns:adquirirIndicadorSaludResponse" />
+  <xs:element name="insertarIndicadorSalud" type="tns:insertarIndicadorSalud" />
+  <xs:element name="insertarIndicadorSaludResponse" type="tns:insertarIndicadorSaludResponse" />
+  <xs:element name="modificarIndicadorSalud" type="tns:modificarIndicadorSalud" />
+  <xs:element name="modificarIndicadorSaludResponse" type="tns:modificarIndicadorSaludResponse" />
+  <xs:complexType name="insertarIndicadorSalud">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="indicadorSalud" type="tns:indicadorSalud" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="indicadorSalud">
+    <xs:sequence>
+      <xs:element name="alcohol" type="xs:boolean" />
+      <xs:element minOccurs="0" name="alergiasMed" type="xs:string" />
+      <xs:element name="analgesicos" type="xs:boolean" />
+      <xs:element name="antiacidos" type="xs:boolean" />
+      <xs:element name="anticonceptivosOrales" type="xs:boolean" />
+      <xs:element name="cafe" type="xs:boolean" />
+      <xs:element name="celiaquia" type="xs:boolean" />
+      <xs:element minOccurs="0" name="cirugiasPrevias" type="xs:string" />
+      <xs:element name="climaterio" type="xs:boolean" />
+      <xs:element name="colitis" type="xs:boolean" />
+      <xs:element name="dentadura" type="xs:boolean" />
+      <xs:element name="diarrea" type="xs:boolean" />
+      <xs:element name="diureticos" type="xs:boolean" />
+      <xs:element name="embarazo" type="xs:boolean" />
+      <xs:element name="estrenimiento" type="xs:boolean" />
+      <xs:element name="fid_alumno" type="xs:int" />
+      <xs:element name="gastritis" type="xs:boolean" />
+      <xs:element name="laxantes" type="xs:boolean" />
+      <xs:element name="nausea" type="xs:boolean" />
+      <xs:element name="pirosis" type="xs:boolean" />
+      <xs:element name="sensibilidadDental" type="xs:boolean" />
+      <xs:element name="tabaco" type="xs:boolean" />
+      <xs:element name="terapiaHormonal" type="xs:boolean" />
+      <xs:element name="ulcera" type="xs:boolean" />
+      <xs:element name="vomito" type="xs:boolean" />
+      <xs:element name="aFCancer" type="xs:boolean" />
+      <xs:element name="aFDiabetes" type="xs:boolean" />
+      <xs:element name="aFHTA" type="xs:boolean" />
+      <xs:element name="aFHipercolesterolemia" type="xs:boolean" />
+      <xs:element name="aFHipertrigliceridemia" type="xs:boolean" />
+      <xs:element name="aFObesidad" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarIndicadorSaludResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="adquirirIndicadorSalud">
+    <xs:sequence>
+      <xs:element name="name" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="adquirirIndicadorSaludResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:indicadorSalud" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarIndicadorSalud">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="indicadorSalud" type="tns:indicadorSalud" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarIndicadorSaludResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

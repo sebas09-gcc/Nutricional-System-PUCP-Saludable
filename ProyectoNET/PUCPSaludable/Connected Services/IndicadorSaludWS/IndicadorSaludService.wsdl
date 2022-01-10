@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://services.pucpsaludable.pucp.edu.pe/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="IndicadorSaludService" targetNamespace="http://services.pucpsaludable.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://ws.pucpsaludable.ml:8080/pucpsaludableWebServices/IndicadorSaludService?xsd=1" namespace="http://services.pucpsaludable.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="insertarIndicadorSalud">
+    <part name="parameters" element="tns:insertarIndicadorSalud" />
+  </message>
+  <message name="insertarIndicadorSaludResponse">
+    <part name="parameters" element="tns:insertarIndicadorSaludResponse" />
+  </message>
+  <message name="modificarIndicadorSalud">
+    <part name="parameters" element="tns:modificarIndicadorSalud" />
+  </message>
+  <message name="modificarIndicadorSaludResponse">
+    <part name="parameters" element="tns:modificarIndicadorSaludResponse" />
+  </message>
+  <message name="adquirirIndicadorSalud">
+    <part name="parameters" element="tns:adquirirIndicadorSalud" />
+  </message>
+  <message name="adquirirIndicadorSaludResponse">
+    <part name="parameters" element="tns:adquirirIndicadorSaludResponse" />
+  </message>
+  <portType name="IndicadorSaludService">
+    <operation name="insertarIndicadorSalud">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/IndicadorSaludService/insertarIndicadorSaludRequest" message="tns:insertarIndicadorSalud" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/IndicadorSaludService/insertarIndicadorSaludResponse" message="tns:insertarIndicadorSaludResponse" />
+    </operation>
+    <operation name="modificarIndicadorSalud">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/IndicadorSaludService/modificarIndicadorSaludRequest" message="tns:modificarIndicadorSalud" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/IndicadorSaludService/modificarIndicadorSaludResponse" message="tns:modificarIndicadorSaludResponse" />
+    </operation>
+    <operation name="adquirirIndicadorSalud">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/IndicadorSaludService/adquirirIndicadorSaludRequest" message="tns:adquirirIndicadorSalud" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/IndicadorSaludService/adquirirIndicadorSaludResponse" message="tns:adquirirIndicadorSaludResponse" />
+    </operation>
+  </portType>
+  <binding name="IndicadorSaludServicePortBinding" type="tns:IndicadorSaludService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="insertarIndicadorSalud">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarIndicadorSalud">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="adquirirIndicadorSalud">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="IndicadorSaludService">
+    <port name="IndicadorSaludServicePort" binding="tns:IndicadorSaludServicePortBinding">
+      <soap:address location="http://ws.pucpsaludable.ml:8080/pucpsaludableWebServices/IndicadorSaludService" />
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://services.pucpsaludable.pucp.edu.pe/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="HorasSuenhoServices" targetNamespace="http://services.pucpsaludable.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://ws.pucpsaludable.ml:8080/pucpsaludableWebServices/HorasSuenhoServices?xsd=1" namespace="http://services.pucpsaludable.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="eliminarHorasSuenho">
+    <part name="parameters" element="tns:eliminarHorasSuenho" />
+  </message>
+  <message name="eliminarHorasSuenhoResponse">
+    <part name="parameters" element="tns:eliminarHorasSuenhoResponse" />
+  </message>
+  <message name="modificarHorasSuenho">
+    <part name="parameters" element="tns:modificarHorasSuenho" />
+  </message>
+  <message name="modificarHorasSuenhoResponse">
+    <part name="parameters" element="tns:modificarHorasSuenhoResponse" />
+  </message>
+  <message name="insertarHorasSuenho">
+    <part name="parameters" element="tns:insertarHorasSuenho" />
+  </message>
+  <message name="insertarHorasSuenhoResponse">
+    <part name="parameters" element="tns:insertarHorasSuenhoResponse" />
+  </message>
+  <message name="listarHorasSuenPorAlum">
+    <part name="parameters" element="tns:listarHorasSuenPorAlum" />
+  </message>
+  <message name="listarHorasSuenPorAlumResponse">
+    <part name="parameters" element="tns:listarHorasSuenPorAlumResponse" />
+  </message>
+  <portType name="HorasSuenhoServices">
+    <operation name="eliminarHorasSuenho">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/HorasSuenhoServices/eliminarHorasSuenhoRequest" message="tns:eliminarHorasSuenho" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/HorasSuenhoServices/eliminarHorasSuenhoResponse" message="tns:eliminarHorasSuenhoResponse" />
+    </operation>
+    <operation name="modificarHorasSuenho">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/HorasSuenhoServices/modificarHorasSuenhoRequest" message="tns:modificarHorasSuenho" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/HorasSuenhoServices/modificarHorasSuenhoResponse" message="tns:modificarHorasSuenhoResponse" />
+    </operation>
+    <operation name="insertarHorasSuenho">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/HorasSuenhoServices/insertarHorasSuenhoRequest" message="tns:insertarHorasSuenho" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/HorasSuenhoServices/insertarHorasSuenhoResponse" message="tns:insertarHorasSuenhoResponse" />
+    </operation>
+    <operation name="listarHorasSuenPorAlum">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/HorasSuenhoServices/listarHorasSuenPorAlumRequest" message="tns:listarHorasSuenPorAlum" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/HorasSuenhoServices/listarHorasSuenPorAlumResponse" message="tns:listarHorasSuenPorAlumResponse" />
+    </operation>
+  </portType>
+  <binding name="HorasSuenhoServicesPortBinding" type="tns:HorasSuenhoServices">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="eliminarHorasSuenho">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarHorasSuenho">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarHorasSuenho">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarHorasSuenPorAlum">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="HorasSuenhoServices">
+    <port name="HorasSuenhoServicesPort" binding="tns:HorasSuenhoServicesPortBinding">
+      <soap:address location="http://ws.pucpsaludable.ml:8080/pucpsaludableWebServices/HorasSuenhoServices" />
+    </port>
+  </service>
+</definitions>

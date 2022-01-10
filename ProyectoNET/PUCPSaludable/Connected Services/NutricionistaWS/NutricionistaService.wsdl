@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.pucpsaludable.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="NutricionistaService" targetNamespace="http://services.pucpsaludable.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://ws.pucpsaludable.ml:8080/pucpsaludableWebServices/NutricionistaService?xsd=1" namespace="http://services.pucpsaludable.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="listarNutricionistaID">
+    <part name="parameters" element="tns:listarNutricionistaID" />
+  </message>
+  <message name="listarNutricionistaIDResponse">
+    <part name="parameters" element="tns:listarNutricionistaIDResponse" />
+  </message>
+  <message name="modificarNutricionista">
+    <part name="parameters" element="tns:modificarNutricionista" />
+  </message>
+  <message name="modificarNutricionistaResponse">
+    <part name="parameters" element="tns:modificarNutricionistaResponse" />
+  </message>
+  <portType name="NutricionistaService">
+    <operation name="listarNutricionistaID">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/NutricionistaService/listarNutricionistaIDRequest" message="tns:listarNutricionistaID" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/NutricionistaService/listarNutricionistaIDResponse" message="tns:listarNutricionistaIDResponse" />
+    </operation>
+    <operation name="modificarNutricionista">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/NutricionistaService/modificarNutricionistaRequest" message="tns:modificarNutricionista" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/NutricionistaService/modificarNutricionistaResponse" message="tns:modificarNutricionistaResponse" />
+    </operation>
+  </portType>
+  <binding name="NutricionistaServicePortBinding" type="tns:NutricionistaService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarNutricionistaID">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarNutricionista">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="NutricionistaService">
+    <port name="NutricionistaServicePort" binding="tns:NutricionistaServicePortBinding">
+      <soap:address location="http://ws.pucpsaludable.ml:8080/pucpsaludableWebServices/NutricionistaService" />
+    </port>
+  </service>
+</definitions>

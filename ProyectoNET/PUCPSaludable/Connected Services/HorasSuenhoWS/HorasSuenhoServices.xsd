@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.pucpsaludable.pucp.edu.pe/" targetNamespace="http://services.pucpsaludable.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="eliminarHorasSuenho" type="tns:eliminarHorasSuenho" />
+  <xs:element name="eliminarHorasSuenhoResponse" type="tns:eliminarHorasSuenhoResponse" />
+  <xs:element name="insertarHorasSuenho" type="tns:insertarHorasSuenho" />
+  <xs:element name="insertarHorasSuenhoResponse" type="tns:insertarHorasSuenhoResponse" />
+  <xs:element name="listarHorasSuenPorAlum" type="tns:listarHorasSuenPorAlum" />
+  <xs:element name="listarHorasSuenPorAlumResponse" type="tns:listarHorasSuenPorAlumResponse" />
+  <xs:element name="modificarHorasSuenho" type="tns:modificarHorasSuenho" />
+  <xs:element name="modificarHorasSuenhoResponse" type="tns:modificarHorasSuenhoResponse" />
+  <xs:complexType name="listarHorasSuenPorAlum">
+    <xs:sequence>
+      <xs:element name="idAl" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarHorasSuenPorAlumResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:horasSuenho" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="horasSuenho">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element name="fid_alumno" type="xs:int" />
+      <xs:element name="horas" type="xs:double" />
+      <xs:element name="id_horasSueno" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarHorasSuenho">
+    <xs:sequence>
+      <xs:element name="idHorasSue" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarHorasSuenhoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarHorasSuenho">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="horasSue" type="tns:horasSuenho" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarHorasSuenhoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarHorasSuenho">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="horasSue" type="tns:horasSuenho" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarHorasSuenhoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

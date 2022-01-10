@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://services.pucpsaludable.pucp.edu.pe/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="Especialista" targetNamespace="http://services.pucpsaludable.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://ws.pucpsaludable.ml:8080/pucpsaludableWebServices/Especialista?xsd=1" namespace="http://services.pucpsaludable.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="videoEspecialistaPorID">
+    <part name="parameters" element="tns:videoEspecialistaPorID" />
+  </message>
+  <message name="videoEspecialistaPorIDResponse">
+    <part name="parameters" element="tns:videoEspecialistaPorIDResponse" />
+  </message>
+  <message name="agregarVideo">
+    <part name="parameters" element="tns:agregarVideo" />
+  </message>
+  <message name="agregarVideoResponse">
+    <part name="parameters" element="tns:agregarVideoResponse" />
+  </message>
+  <message name="listarVideos">
+    <part name="parameters" element="tns:listarVideos" />
+  </message>
+  <message name="listarVideosResponse">
+    <part name="parameters" element="tns:listarVideosResponse" />
+  </message>
+  <message name="listarMensajes">
+    <part name="parameters" element="tns:listarMensajes" />
+  </message>
+  <message name="listarMensajesResponse">
+    <part name="parameters" element="tns:listarMensajesResponse" />
+  </message>
+  <message name="mensajeEspecialistaPorID">
+    <part name="parameters" element="tns:mensajeEspecialistaPorID" />
+  </message>
+  <message name="mensajeEspecialistaPorIDResponse">
+    <part name="parameters" element="tns:mensajeEspecialistaPorIDResponse" />
+  </message>
+  <message name="agregarMensaje">
+    <part name="parameters" element="tns:agregarMensaje" />
+  </message>
+  <message name="agregarMensajeResponse">
+    <part name="parameters" element="tns:agregarMensajeResponse" />
+  </message>
+  <portType name="EspecialistaService">
+    <operation name="videoEspecialistaPorID">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/EspecialistaService/videoEspecialistaPorIDRequest" message="tns:videoEspecialistaPorID" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/EspecialistaService/videoEspecialistaPorIDResponse" message="tns:videoEspecialistaPorIDResponse" />
+    </operation>
+    <operation name="agregarVideo">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/EspecialistaService/agregarVideoRequest" message="tns:agregarVideo" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/EspecialistaService/agregarVideoResponse" message="tns:agregarVideoResponse" />
+    </operation>
+    <operation name="listarVideos">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/EspecialistaService/listarVideosRequest" message="tns:listarVideos" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/EspecialistaService/listarVideosResponse" message="tns:listarVideosResponse" />
+    </operation>
+    <operation name="listarMensajes">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/EspecialistaService/listarMensajesRequest" message="tns:listarMensajes" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/EspecialistaService/listarMensajesResponse" message="tns:listarMensajesResponse" />
+    </operation>
+    <operation name="mensajeEspecialistaPorID">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/EspecialistaService/mensajeEspecialistaPorIDRequest" message="tns:mensajeEspecialistaPorID" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/EspecialistaService/mensajeEspecialistaPorIDResponse" message="tns:mensajeEspecialistaPorIDResponse" />
+    </operation>
+    <operation name="agregarMensaje">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/EspecialistaService/agregarMensajeRequest" message="tns:agregarMensaje" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/EspecialistaService/agregarMensajeResponse" message="tns:agregarMensajeResponse" />
+    </operation>
+  </portType>
+  <binding name="EspecialistaServicePortBinding" type="tns:EspecialistaService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="videoEspecialistaPorID">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="agregarVideo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarVideos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarMensajes">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="mensajeEspecialistaPorID">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="agregarMensaje">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="Especialista">
+    <port name="EspecialistaServicePort" binding="tns:EspecialistaServicePortBinding">
+      <soap:address location="http://ws.pucpsaludable.ml:8080/pucpsaludableWebServices/Especialista" />
+    </port>
+  </service>
+</definitions>

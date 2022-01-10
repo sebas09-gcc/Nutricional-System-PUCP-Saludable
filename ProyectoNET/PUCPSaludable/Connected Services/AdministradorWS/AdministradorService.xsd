@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.pucpsaludable.pucp.edu.pe/" targetNamespace="http://services.pucpsaludable.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="changeUserStatus" type="tns:changeUserStatus" />
+  <xs:element name="changeUserStatusResponse" type="tns:changeUserStatusResponse" />
+  <xs:element name="deleteRole" type="tns:deleteRole" />
+  <xs:element name="deleteRoleResponse" type="tns:deleteRoleResponse" />
+  <xs:element name="deleteRule" type="tns:deleteRule" />
+  <xs:element name="deleteRuleResponse" type="tns:deleteRuleResponse" />
+  <xs:element name="getRoles" type="tns:getRoles" />
+  <xs:element name="getRolesResponse" type="tns:getRolesResponse" />
+  <xs:element name="getRules" type="tns:getRules" />
+  <xs:element name="getRulesResponse" type="tns:getRulesResponse" />
+  <xs:element name="getUsersByStatus" type="tns:getUsersByStatus" />
+  <xs:element name="getUsersByStatusResponse" type="tns:getUsersByStatusResponse" />
+  <xs:element name="insertRole" type="tns:insertRole" />
+  <xs:element name="insertRoleResponse" type="tns:insertRoleResponse" />
+  <xs:element name="insertRule" type="tns:insertRule" />
+  <xs:element name="insertRuleResponse" type="tns:insertRuleResponse" />
+  <xs:element name="modifyRole" type="tns:modifyRole" />
+  <xs:element name="modifyRoleResponse" type="tns:modifyRoleResponse" />
+  <xs:element name="modifyRule" type="tns:modifyRule" />
+  <xs:element name="modifyRuleResponse" type="tns:modifyRuleResponse" />
+  <xs:element name="noWebService" type="tns:noWebService" />
+  <xs:element name="noWebServiceResponse" type="tns:noWebServiceResponse" />
+  <xs:complexType name="noWebService">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:alumno" />
+      <xs:element minOccurs="0" name="arg1" type="tns:nutricionista" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="alumno">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:usuario">
+        <xs:sequence>
+          <xs:element name="creditosAprobados" type="xs:double" />
+          <xs:element minOccurs="0" name="especialidad" type="tns:especialidad" />
+          <xs:element name="matriculado" type="xs:int" />
+          <xs:element minOccurs="0" name="nombreContacto" type="xs:string" />
+          <xs:element minOccurs="0" name="numContacto" type="xs:string" />
+          <xs:element minOccurs="0" name="parentezcoContacto" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="planesAlimentarios" nillable="true" type="tns:planAlimentario" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="usuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apellidos" type="xs:string" />
+      <xs:element minOccurs="0" name="codigoPUCP" type="xs:string" />
+      <xs:element minOccurs="0" name="contrasena" type="xs:string" />
+      <xs:element minOccurs="0" name="emailPUCP" type="xs:string" />
+      <xs:element minOccurs="0" name="emailPersonal" type="xs:string" />
+      <xs:element name="estado" type="xs:int" />
+      <xs:element minOccurs="0" name="fechaNacimiento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fotoSrc" type="xs:base64Binary" />
+      <xs:element name="id_usuario" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreCompleto" type="xs:string" />
+      <xs:element minOccurs="0" name="nombres" type="xs:string" />
+      <xs:element name="sexo" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="telefonoMovil" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="especialidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcionEspecialidad" type="xs:string" />
+      <xs:element minOccurs="0" name="facultad" type="tns:facultad" />
+      <xs:element name="id_especialidad" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreEspecialidad" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="facultad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcionFacultad" type="xs:string" />
+      <xs:element name="id_facultad" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreFacultad" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="planAlimentario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="alumno" type="tns:alumno" />
+      <xs:element minOccurs="0" name="comida" type="tns:presetReceta" />
+      <xs:element name="dia" type="xs:int" />
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element name="fid_Nutricionista" type="xs:int" />
+      <xs:element name="tipoComida" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="presetReceta">
+    <xs:sequence>
+      <xs:element name="estado" type="xs:int" />
+      <xs:element name="idPresetReceta" type="xs:int" />
+      <xs:element name="kcal" type="xs:double" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element name="tipo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="nutricionista">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:especialistaSalud">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="planesAlimentarios" nillable="true" type="tns:planAlimentario" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="especialistaSalud" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:especialista">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="colegiatura" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="especialista" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:usuario">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="biografia" type="xs:string" />
+          <xs:element minOccurs="0" name="direccionLaboral" type="xs:string" />
+          <xs:element minOccurs="0" name="telefonoLaboral" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="noWebServiceResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="insertRule">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="rule" type="tns:regla" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="regla">
+    <xs:sequence>
+      <xs:element name="clave" type="xs:int" />
+      <xs:element name="estado" type="xs:boolean" />
+      <xs:element name="id_regla" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element name="tipo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertRuleResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modifyRole">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="role" type="tns:rol" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="rol">
+    <xs:sequence>
+      <xs:element name="estado" type="xs:boolean" />
+      <xs:element name="id_rol" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="reglas" nillable="true" type="tns:regla" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modifyRoleResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modifyRule">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="rule" type="tns:regla" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modifyRuleResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getUsersByStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="name" type="xs:string" />
+      <xs:element name="status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getUsersByStatusResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:usuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getRules">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getRulesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:regla" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteRule">
+    <xs:sequence>
+      <xs:element name="rule" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteRuleResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="changeUserStatus">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+      <xs:element name="status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="changeUserStatusResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertRole">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="role" type="tns:rol" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertRoleResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteRole">
+    <xs:sequence>
+      <xs:element name="role" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteRoleResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getRoles">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getRolesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:rol" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

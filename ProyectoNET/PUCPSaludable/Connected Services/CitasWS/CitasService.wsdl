@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://services.pucpsaludable.pucp.edu.pe/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="CitasService" targetNamespace="http://services.pucpsaludable.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://ws.pucpsaludable.ml:8080/pucpsaludableWebServices/CitasService?xsd=1" namespace="http://services.pucpsaludable.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="listarCitaHistoricaNutricionistaPorNombre">
+    <part name="parameters" element="tns:listarCitaHistoricaNutricionistaPorNombre" />
+  </message>
+  <message name="listarCitaHistoricaNutricionistaPorNombreResponse">
+    <part name="parameters" element="tns:listarCitaHistoricaNutricionistaPorNombreResponse" />
+  </message>
+  <message name="listarCitaHistoricaPorNombreCodigo">
+    <part name="parameters" element="tns:listarCitaHistoricaPorNombreCodigo" />
+  </message>
+  <message name="listarCitaHistoricaPorNombreCodigoResponse">
+    <part name="parameters" element="tns:listarCitaHistoricaPorNombreCodigoResponse" />
+  </message>
+  <message name="listarCitaProgramadaNutricionistaPorID">
+    <part name="parameters" element="tns:listarCitaProgramadaNutricionistaPorID" />
+  </message>
+  <message name="listarCitaProgramadaNutricionistaPorIDResponse">
+    <part name="parameters" element="tns:listarCitaProgramadaNutricionistaPorIDResponse" />
+  </message>
+  <message name="listarCitaProgramadaPorNombreCodigo">
+    <part name="parameters" element="tns:listarCitaProgramadaPorNombreCodigo" />
+  </message>
+  <message name="listarCitaProgramadaPorNombreCodigoResponse">
+    <part name="parameters" element="tns:listarCitaProgramadaPorNombreCodigoResponse" />
+  </message>
+  <message name="listarCitaProgramadaNutricionistaPorNombre">
+    <part name="parameters" element="tns:listarCitaProgramadaNutricionistaPorNombre" />
+  </message>
+  <message name="listarCitaProgramadaNutricionistaPorNombreResponse">
+    <part name="parameters" element="tns:listarCitaProgramadaNutricionistaPorNombreResponse" />
+  </message>
+  <message name="listarCitaHistoricaNutricionistaPorID">
+    <part name="parameters" element="tns:listarCitaHistoricaNutricionistaPorID" />
+  </message>
+  <message name="listarCitaHistoricaNutricionistaPorIDResponse">
+    <part name="parameters" element="tns:listarCitaHistoricaNutricionistaPorIDResponse" />
+  </message>
+  <message name="listarCitaProgramadaPorID">
+    <part name="parameters" element="tns:listarCitaProgramadaPorID" />
+  </message>
+  <message name="listarCitaProgramadaPorIDResponse">
+    <part name="parameters" element="tns:listarCitaProgramadaPorIDResponse" />
+  </message>
+  <message name="listarCitaHistoricaPorID">
+    <part name="parameters" element="tns:listarCitaHistoricaPorID" />
+  </message>
+  <message name="listarCitaHistoricaPorIDResponse">
+    <part name="parameters" element="tns:listarCitaHistoricaPorIDResponse" />
+  </message>
+  <message name="registerAppointment">
+    <part name="parameters" element="tns:registerAppointment" />
+  </message>
+  <message name="registerAppointmentResponse">
+    <part name="parameters" element="tns:registerAppointmentResponse" />
+  </message>
+  <message name="getAvailableAppointments">
+    <part name="parameters" element="tns:getAvailableAppointments" />
+  </message>
+  <message name="getAvailableAppointmentsResponse">
+    <part name="parameters" element="tns:getAvailableAppointmentsResponse" />
+  </message>
+  <message name="cancelarCitaXAlumnoOEspecialista">
+    <part name="parameters" element="tns:cancelarCitaXAlumnoOEspecialista" />
+  </message>
+  <message name="cancelarCitaXAlumnoOEspecialistaResponse">
+    <part name="parameters" element="tns:cancelarCitaXAlumnoOEspecialistaResponse" />
+  </message>
+  <message name="getNutritionists">
+    <part name="parameters" element="tns:getNutritionists" />
+  </message>
+  <message name="getNutritionistsResponse">
+    <part name="parameters" element="tns:getNutritionistsResponse" />
+  </message>
+  <message name="modificarCita">
+    <part name="parameters" element="tns:modificarCita" />
+  </message>
+  <message name="modificarCitaResponse">
+    <part name="parameters" element="tns:modificarCitaResponse" />
+  </message>
+  <message name="eliminarCitaxId">
+    <part name="parameters" element="tns:eliminarCitaxId" />
+  </message>
+  <message name="eliminarCitaxIdResponse">
+    <part name="parameters" element="tns:eliminarCitaxIdResponse" />
+  </message>
+  <portType name="CitasService">
+    <operation name="listarCitaHistoricaNutricionistaPorNombre">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/CitasService/listarCitaHistoricaNutricionistaPorNombreRequest" message="tns:listarCitaHistoricaNutricionistaPorNombre" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/CitasService/listarCitaHistoricaNutricionistaPorNombreResponse" message="tns:listarCitaHistoricaNutricionistaPorNombreResponse" />
+    </operation>
+    <operation name="listarCitaHistoricaPorNombreCodigo">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/CitasService/listarCitaHistoricaPorNombreCodigoRequest" message="tns:listarCitaHistoricaPorNombreCodigo" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/CitasService/listarCitaHistoricaPorNombreCodigoResponse" message="tns:listarCitaHistoricaPorNombreCodigoResponse" />
+    </operation>
+    <operation name="listarCitaProgramadaNutricionistaPorID">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/CitasService/listarCitaProgramadaNutricionistaPorIDRequest" message="tns:listarCitaProgramadaNutricionistaPorID" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/CitasService/listarCitaProgramadaNutricionistaPorIDResponse" message="tns:listarCitaProgramadaNutricionistaPorIDResponse" />
+    </operation>
+    <operation name="listarCitaProgramadaPorNombreCodigo">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/CitasService/listarCitaProgramadaPorNombreCodigoRequest" message="tns:listarCitaProgramadaPorNombreCodigo" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/CitasService/listarCitaProgramadaPorNombreCodigoResponse" message="tns:listarCitaProgramadaPorNombreCodigoResponse" />
+    </operation>
+    <operation name="listarCitaProgramadaNutricionistaPorNombre">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/CitasService/listarCitaProgramadaNutricionistaPorNombreRequest" message="tns:listarCitaProgramadaNutricionistaPorNombre" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/CitasService/listarCitaProgramadaNutricionistaPorNombreResponse" message="tns:listarCitaProgramadaNutricionistaPorNombreResponse" />
+    </operation>
+    <operation name="listarCitaHistoricaNutricionistaPorID">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/CitasService/listarCitaHistoricaNutricionistaPorIDRequest" message="tns:listarCitaHistoricaNutricionistaPorID" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/CitasService/listarCitaHistoricaNutricionistaPorIDResponse" message="tns:listarCitaHistoricaNutricionistaPorIDResponse" />
+    </operation>
+    <operation name="listarCitaProgramadaPorID">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/CitasService/listarCitaProgramadaPorIDRequest" message="tns:listarCitaProgramadaPorID" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/CitasService/listarCitaProgramadaPorIDResponse" message="tns:listarCitaProgramadaPorIDResponse" />
+    </operation>
+    <operation name="listarCitaHistoricaPorID">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/CitasService/listarCitaHistoricaPorIDRequest" message="tns:listarCitaHistoricaPorID" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/CitasService/listarCitaHistoricaPorIDResponse" message="tns:listarCitaHistoricaPorIDResponse" />
+    </operation>
+    <operation name="registerAppointment">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/CitasService/registerAppointmentRequest" message="tns:registerAppointment" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/CitasService/registerAppointmentResponse" message="tns:registerAppointmentResponse" />
+    </operation>
+    <operation name="getAvailableAppointments">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/CitasService/getAvailableAppointmentsRequest" message="tns:getAvailableAppointments" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/CitasService/getAvailableAppointmentsResponse" message="tns:getAvailableAppointmentsResponse" />
+    </operation>
+    <operation name="cancelarCitaXAlumnoOEspecialista">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/CitasService/cancelarCitaXAlumnoOEspecialistaRequest" message="tns:cancelarCitaXAlumnoOEspecialista" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/CitasService/cancelarCitaXAlumnoOEspecialistaResponse" message="tns:cancelarCitaXAlumnoOEspecialistaResponse" />
+    </operation>
+    <operation name="getNutritionists">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/CitasService/getNutritionistsRequest" message="tns:getNutritionists" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/CitasService/getNutritionistsResponse" message="tns:getNutritionistsResponse" />
+    </operation>
+    <operation name="modificarCita">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/CitasService/modificarCitaRequest" message="tns:modificarCita" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/CitasService/modificarCitaResponse" message="tns:modificarCitaResponse" />
+    </operation>
+    <operation name="eliminarCitaxId">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/CitasService/eliminarCitaxIdRequest" message="tns:eliminarCitaxId" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/CitasService/eliminarCitaxIdResponse" message="tns:eliminarCitaxIdResponse" />
+    </operation>
+  </portType>
+  <binding name="CitasServicePortBinding" type="tns:CitasService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarCitaHistoricaNutricionistaPorNombre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCitaHistoricaPorNombreCodigo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCitaProgramadaNutricionistaPorID">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCitaProgramadaPorNombreCodigo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCitaProgramadaNutricionistaPorNombre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCitaHistoricaNutricionistaPorID">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCitaProgramadaPorID">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCitaHistoricaPorID">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="registerAppointment">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAvailableAppointments">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="cancelarCitaXAlumnoOEspecialista">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getNutritionists">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarCita">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarCitaxId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="CitasService">
+    <port name="CitasServicePort" binding="tns:CitasServicePortBinding">
+      <soap:address location="http://ws.pucpsaludable.ml:8080/pucpsaludableWebServices/CitasService" />
+    </port>
+  </service>
+</definitions>

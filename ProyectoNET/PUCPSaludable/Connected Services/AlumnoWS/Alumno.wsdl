@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://services.pucpsaludable.pucp.edu.pe/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="Alumno" targetNamespace="http://services.pucpsaludable.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://ws.pucpsaludable.ml:8080/pucpsaludableWebServices/Alumno?xsd=1" namespace="http://services.pucpsaludable.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="listarAlumnoNombreCodigo">
+    <part name="parameters" element="tns:listarAlumnoNombreCodigo" />
+  </message>
+  <message name="listarAlumnoNombreCodigoResponse">
+    <part name="parameters" element="tns:listarAlumnoNombreCodigoResponse" />
+  </message>
+  <message name="modificarAlumnoID">
+    <part name="parameters" element="tns:modificarAlumnoID" />
+  </message>
+  <message name="modificarAlumnoIDResponse">
+    <part name="parameters" element="tns:modificarAlumnoIDResponse" />
+  </message>
+  <message name="listarAlumnoID">
+    <part name="parameters" element="tns:listarAlumnoID" />
+  </message>
+  <message name="listarAlumnoIDResponse">
+    <part name="parameters" element="tns:listarAlumnoIDResponse" />
+  </message>
+  <message name="generarPlanAlimenticio">
+    <part name="parameters" element="tns:generarPlanAlimenticio" />
+  </message>
+  <message name="generarPlanAlimenticioResponse">
+    <part name="parameters" element="tns:generarPlanAlimenticioResponse" />
+  </message>
+  <message name="listarAlumno">
+    <part name="parameters" element="tns:listarAlumno" />
+  </message>
+  <message name="listarAlumnoResponse">
+    <part name="parameters" element="tns:listarAlumnoResponse" />
+  </message>
+  <portType name="AlumnoService">
+    <operation name="listarAlumnoNombreCodigo">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/AlumnoService/listarAlumnoNombreCodigoRequest" message="tns:listarAlumnoNombreCodigo" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/AlumnoService/listarAlumnoNombreCodigoResponse" message="tns:listarAlumnoNombreCodigoResponse" />
+    </operation>
+    <operation name="modificarAlumnoID">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/AlumnoService/modificarAlumnoIDRequest" message="tns:modificarAlumnoID" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/AlumnoService/modificarAlumnoIDResponse" message="tns:modificarAlumnoIDResponse" />
+    </operation>
+    <operation name="listarAlumnoID">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/AlumnoService/listarAlumnoIDRequest" message="tns:listarAlumnoID" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/AlumnoService/listarAlumnoIDResponse" message="tns:listarAlumnoIDResponse" />
+    </operation>
+    <operation name="generarPlanAlimenticio">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/AlumnoService/generarPlanAlimenticioRequest" message="tns:generarPlanAlimenticio" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/AlumnoService/generarPlanAlimenticioResponse" message="tns:generarPlanAlimenticioResponse" />
+    </operation>
+    <operation name="listarAlumno">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/AlumnoService/listarAlumnoRequest" message="tns:listarAlumno" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/AlumnoService/listarAlumnoResponse" message="tns:listarAlumnoResponse" />
+    </operation>
+  </portType>
+  <binding name="AlumnoServicePortBinding" type="tns:AlumnoService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarAlumnoNombreCodigo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarAlumnoID">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarAlumnoID">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="generarPlanAlimenticio">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarAlumno">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="Alumno">
+    <port name="AlumnoServicePort" binding="tns:AlumnoServicePortBinding">
+      <soap:address location="http://ws.pucpsaludable.ml:8080/pucpsaludableWebServices/Alumno" />
+    </port>
+  </service>
+</definitions>

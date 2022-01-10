@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://services.pucpsaludable.pucp.edu.pe/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="IngredienteService" targetNamespace="http://services.pucpsaludable.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://ws.pucpsaludable.ml:8080/pucpsaludableWebServices/IngredienteService?xsd=1" namespace="http://services.pucpsaludable.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="listarIngredientesNoClasificados">
+    <part name="parameters" element="tns:listarIngredientesNoClasificados" />
+  </message>
+  <message name="listarIngredientesNoClasificadosResponse">
+    <part name="parameters" element="tns:listarIngredientesNoClasificadosResponse" />
+  </message>
+  <message name="listarIngredientesNombre">
+    <part name="parameters" element="tns:listarIngredientesNombre" />
+  </message>
+  <message name="listarIngredientesNombreResponse">
+    <part name="parameters" element="tns:listarIngredientesNombreResponse" />
+  </message>
+  <message name="listarIngredientesPreset">
+    <part name="parameters" element="tns:listarIngredientesPreset" />
+  </message>
+  <message name="listarIngredientesPresetResponse">
+    <part name="parameters" element="tns:listarIngredientesPresetResponse" />
+  </message>
+  <message name="listarIngredientesTodos">
+    <part name="parameters" element="tns:listarIngredientesTodos" />
+  </message>
+  <message name="listarIngredientesTodosResponse">
+    <part name="parameters" element="tns:listarIngredientesTodosResponse" />
+  </message>
+  <message name="listarIngredientesPrefAl">
+    <part name="parameters" element="tns:listarIngredientesPrefAl" />
+  </message>
+  <message name="listarIngredientesPrefAlResponse">
+    <part name="parameters" element="tns:listarIngredientesPrefAlResponse" />
+  </message>
+  <message name="eliminarIngre">
+    <part name="parameters" element="tns:eliminarIngre" />
+  </message>
+  <message name="eliminarIngreResponse">
+    <part name="parameters" element="tns:eliminarIngreResponse" />
+  </message>
+  <message name="modificarIngre">
+    <part name="parameters" element="tns:modificarIngre" />
+  </message>
+  <message name="modificarIngreResponse">
+    <part name="parameters" element="tns:modificarIngreResponse" />
+  </message>
+  <message name="insertarIngre">
+    <part name="parameters" element="tns:insertarIngre" />
+  </message>
+  <message name="insertarIngreResponse">
+    <part name="parameters" element="tns:insertarIngreResponse" />
+  </message>
+  <portType name="IngredienteService">
+    <operation name="listarIngredientesNoClasificados">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/IngredienteService/listarIngredientesNoClasificadosRequest" message="tns:listarIngredientesNoClasificados" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/IngredienteService/listarIngredientesNoClasificadosResponse" message="tns:listarIngredientesNoClasificadosResponse" />
+    </operation>
+    <operation name="listarIngredientesNombre">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/IngredienteService/listarIngredientesNombreRequest" message="tns:listarIngredientesNombre" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/IngredienteService/listarIngredientesNombreResponse" message="tns:listarIngredientesNombreResponse" />
+    </operation>
+    <operation name="listarIngredientesPreset">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/IngredienteService/listarIngredientesPresetRequest" message="tns:listarIngredientesPreset" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/IngredienteService/listarIngredientesPresetResponse" message="tns:listarIngredientesPresetResponse" />
+    </operation>
+    <operation name="listarIngredientesTodos">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/IngredienteService/listarIngredientesTodosRequest" message="tns:listarIngredientesTodos" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/IngredienteService/listarIngredientesTodosResponse" message="tns:listarIngredientesTodosResponse" />
+    </operation>
+    <operation name="listarIngredientesPrefAl">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/IngredienteService/listarIngredientesPrefAlRequest" message="tns:listarIngredientesPrefAl" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/IngredienteService/listarIngredientesPrefAlResponse" message="tns:listarIngredientesPrefAlResponse" />
+    </operation>
+    <operation name="eliminarIngre">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/IngredienteService/eliminarIngreRequest" message="tns:eliminarIngre" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/IngredienteService/eliminarIngreResponse" message="tns:eliminarIngreResponse" />
+    </operation>
+    <operation name="modificarIngre">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/IngredienteService/modificarIngreRequest" message="tns:modificarIngre" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/IngredienteService/modificarIngreResponse" message="tns:modificarIngreResponse" />
+    </operation>
+    <operation name="insertarIngre">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/IngredienteService/insertarIngreRequest" message="tns:insertarIngre" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/IngredienteService/insertarIngreResponse" message="tns:insertarIngreResponse" />
+    </operation>
+  </portType>
+  <binding name="IngredienteServicePortBinding" type="tns:IngredienteService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarIngredientesNoClasificados">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarIngredientesNombre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarIngredientesPreset">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarIngredientesTodos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarIngredientesPrefAl">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarIngre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarIngre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarIngre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="IngredienteService">
+    <port name="IngredienteServicePort" binding="tns:IngredienteServicePortBinding">
+      <soap:address location="http://ws.pucpsaludable.ml:8080/pucpsaludableWebServices/IngredienteService" />
+    </port>
+  </service>
+</definitions>

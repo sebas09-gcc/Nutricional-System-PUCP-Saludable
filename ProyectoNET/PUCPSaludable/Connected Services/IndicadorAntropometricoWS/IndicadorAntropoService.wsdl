@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://services.pucpsaludable.pucp.edu.pe/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="IndicadorAntropoService" targetNamespace="http://services.pucpsaludable.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://ws.pucpsaludable.ml:8080/pucpsaludableWebServices/IndicadorAntropoService?xsd=1" namespace="http://services.pucpsaludable.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="insertarIndicadorAntropom">
+    <part name="parameters" element="tns:insertarIndicadorAntropom" />
+  </message>
+  <message name="insertarIndicadorAntropomResponse">
+    <part name="parameters" element="tns:insertarIndicadorAntropomResponse" />
+  </message>
+  <message name="eliminarIndicadorAntropom">
+    <part name="parameters" element="tns:eliminarIndicadorAntropom" />
+  </message>
+  <message name="eliminarIndicadorAntropomResponse">
+    <part name="parameters" element="tns:eliminarIndicadorAntropomResponse" />
+  </message>
+  <message name="listarIndicadorAntropomPorAlumno">
+    <part name="parameters" element="tns:listarIndicadorAntropomPorAlumno" />
+  </message>
+  <message name="listarIndicadorAntropomPorAlumnoResponse">
+    <part name="parameters" element="tns:listarIndicadorAntropomPorAlumnoResponse" />
+  </message>
+  <message name="modificarIndicadorAntropom">
+    <part name="parameters" element="tns:modificarIndicadorAntropom" />
+  </message>
+  <message name="modificarIndicadorAntropomResponse">
+    <part name="parameters" element="tns:modificarIndicadorAntropomResponse" />
+  </message>
+  <portType name="IndicadorAntropoService">
+    <operation name="insertarIndicadorAntropom">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/IndicadorAntropoService/insertarIndicadorAntropomRequest" message="tns:insertarIndicadorAntropom" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/IndicadorAntropoService/insertarIndicadorAntropomResponse" message="tns:insertarIndicadorAntropomResponse" />
+    </operation>
+    <operation name="eliminarIndicadorAntropom">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/IndicadorAntropoService/eliminarIndicadorAntropomRequest" message="tns:eliminarIndicadorAntropom" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/IndicadorAntropoService/eliminarIndicadorAntropomResponse" message="tns:eliminarIndicadorAntropomResponse" />
+    </operation>
+    <operation name="listarIndicadorAntropomPorAlumno">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/IndicadorAntropoService/listarIndicadorAntropomPorAlumnoRequest" message="tns:listarIndicadorAntropomPorAlumno" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/IndicadorAntropoService/listarIndicadorAntropomPorAlumnoResponse" message="tns:listarIndicadorAntropomPorAlumnoResponse" />
+    </operation>
+    <operation name="modificarIndicadorAntropom">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/IndicadorAntropoService/modificarIndicadorAntropomRequest" message="tns:modificarIndicadorAntropom" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/IndicadorAntropoService/modificarIndicadorAntropomResponse" message="tns:modificarIndicadorAntropomResponse" />
+    </operation>
+  </portType>
+  <binding name="IndicadorAntropoServicePortBinding" type="tns:IndicadorAntropoService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="insertarIndicadorAntropom">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarIndicadorAntropom">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarIndicadorAntropomPorAlumno">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarIndicadorAntropom">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="IndicadorAntropoService">
+    <port name="IndicadorAntropoServicePort" binding="tns:IndicadorAntropoServicePortBinding">
+      <soap:address location="http://ws.pucpsaludable.ml:8080/pucpsaludableWebServices/IndicadorAntropoService" />
+    </port>
+  </service>
+</definitions>

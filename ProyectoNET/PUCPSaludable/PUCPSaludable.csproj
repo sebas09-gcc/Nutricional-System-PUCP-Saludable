@@ -1,0 +1,1449 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EB9229A8-E5DD-4558-8FA9-18A2499E0A0D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PUCPSaludable</RootNamespace>
+    <AssemblyName>PUCPSaludable</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'">
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>5975F7B674D4F27E17283D3F98093D4BD1C0C737</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>PUCPSaludable_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GMap.NET.Core, Version=1.7.5.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.WindowsForms.1.7.5\lib\net40\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms, Version=1.7.5.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.WindowsForms.1.7.5\lib\net40\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=2.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.2.2.2.1\lib\net461\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Core, Version=1.0.1020.30, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.1020.30\lib\net45\Microsoft.Web.WebView2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.WinForms, Version=1.0.1020.30, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.1020.30\lib\net45\Microsoft.Web.WebView2.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Wpf, Version=1.0.1020.30, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.1020.30\lib\net45\Microsoft.Web.WebView2.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Alumno\Citas\frmDetalleCitaProgramada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\Citas\frmDetalleCitaProgramada.Designer.cs">
+      <DependentUpon>frmDetalleCitaProgramada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\frmHorasSueDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\frmHorasSueDashboard.Designer.cs">
+      <DependentUpon>frmHorasSueDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\frmIMCDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\frmIMCDashboard.Designer.cs">
+      <DependentUpon>frmIMCDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\Nutricionista\frmDatosIAIncorrectos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\Nutricionista\frmDatosIAIncorrectos.Designer.cs">
+      <DependentUpon>frmDatosIAIncorrectos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\Nutricionista\frmDetalleReceta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\Nutricionista\frmDetalleReceta.Designer.cs">
+      <DependentUpon>frmDetalleReceta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\Nutricionista\frmNoPlanAlimentario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\Nutricionista\frmNoPlanAlimentario.designer.cs">
+      <DependentUpon>frmNoPlanAlimentario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\frmElegirUbicacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\frmElegirUbicacion.Designer.cs">
+      <DependentUpon>frmElegirUbicacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\frmMessageBoxAceptar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\frmMessageBoxAceptar.Designer.cs">
+      <DependentUpon>frmMessageBoxAceptar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\frmMessageBoxSiNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\frmMessageBoxSiNo.Designer.cs">
+      <DependentUpon>frmMessageBoxSiNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\frmMostrarUbicación.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\frmMostrarUbicación.Designer.cs">
+      <DependentUpon>frmMostrarUbicación.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\AdministradorWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\AlimentoWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\AlumnoWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\AutenticacionWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\CitasWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\CRutinaWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\EspecialistaWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\HorarioCitaWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\HorarioHabitualWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\HorasSuenhoWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\IndicadorAntropometricoWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\IndicadorSaludWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\IngredienteWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\NutricionistaWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\PlanAlimentarioWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ucAlimentoListado.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ucAlimentoListado.Designer.cs">
+      <DependentUpon>ucAlimentoListado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ucCitaHistNutri.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ucCitaHistNutri.Designer.cs">
+      <DependentUpon>ucCitaHistNutri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ucCitaProgNutri.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ucCitaProgNutri.Designer.cs">
+      <DependentUpon>ucCitaProgNutri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ucFechaRango.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ucFechaRango.Designer.cs">
+      <DependentUpon>ucFechaRango.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ucMap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ucMap.Designer.cs">
+      <DependentUpon>ucMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ucPlanAlimCardEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ucPlanAlimCardEdit.Designer.cs">
+      <DependentUpon>ucPlanAlimCardEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Enumerados\ECheck.cs" />
+    <Compile Include="Enumerados\EIcon.cs" />
+    <Compile Include="Enumerados\EProgramacion.cs" />
+    <Compile Include="Controles\ucCitaHist.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ucCitaHist.Designer.cs">
+      <DependentUpon>ucCitaHist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ucCitaProg.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ucCitaProg.Designer.cs">
+      <DependentUpon>ucCitaProg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\Citas\frmCitasAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\Citas\frmCitasAlumno.Designer.cs">
+      <DependentUpon>frmCitasAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\Citas\frmDetalleCitaHistorica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\Citas\frmDetalleCitaHistorica.Designer.cs">
+      <DependentUpon>frmDetalleCitaHistorica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\Citas\frmRegistrarCita1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\Citas\frmRegistrarCita1.Designer.cs">
+      <DependentUpon>frmRegistrarCita1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\Citas\frmRegistrarCita2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\Citas\frmRegistrarCita2.Designer.cs">
+      <DependentUpon>frmRegistrarCita2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\Estado.cs" />
+    <Compile Include="Alumno\Nutricionista\frmAgregarAlimento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\Nutricionista\frmAgregarAlimento.Designer.cs">
+      <DependentUpon>frmAgregarAlimento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\Nutricionista\frmAlimentoPredilecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\Nutricionista\frmAlimentoPredilecto.Designer.cs">
+      <DependentUpon>frmAlimentoPredilecto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\frmDashboardAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\frmDashboardAlumno.Designer.cs">
+      <DependentUpon>frmDashboardAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\frmPrincipalAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\frmPrincipalAlumno.Designer.cs">
+      <DependentUpon>frmPrincipalAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\Nutricionista\frmIndicadoresDeSalud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\Nutricionista\frmIndicadoresDeSalud.Designer.cs">
+      <DependentUpon>frmIndicadoresDeSalud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\Nutricionista\frmPlanAlimentario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\Nutricionista\frmPlanAlimentario.designer.cs">
+      <DependentUpon>frmPlanAlimentario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\Nutricionista\frmPlanAlimentarioDetalleEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\Nutricionista\frmPlanAlimentarioDetalleEdit.designer.cs">
+      <DependentUpon>frmPlanAlimentarioDetalleEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Common.cs" />
+    <Compile Include="Controles\ucFecha.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ucFecha.Designer.cs">
+      <DependentUpon>ucFecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ucHistComidas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ucHistComidas.Designer.cs">
+      <DependentUpon>ucHistComidas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ucHistComidasTitle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ucHistComidasTitle.Designer.cs">
+      <DependentUpon>ucHistComidasTitle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ucHoraMinAMPM.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ucHoraMinAMPM.Designer.cs">
+      <DependentUpon>ucHoraMinAMPM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ucSesion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ucSesion.Designer.cs">
+      <DependentUpon>ucSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ucWebView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ucWebView.Designer.cs">
+      <DependentUpon>ucWebView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ucYouTube.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ucYouTube.Designer.cs">
+      <DependentUpon>ucYouTube.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\Nutricionista\frmConsultarPDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\Nutricionista\frmConsultarPDF.Designer.cs">
+      <DependentUpon>frmConsultarPDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Enumerados\ECheckComidas.cs" />
+    <Compile Include="frmBienvenido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBienvenido.Designer.cs">
+      <DependentUpon>frmBienvenido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nutricionista\Estado.cs" />
+    <Compile Include="Nutricionista\frmCitasNutricionista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nutricionista\frmCitasNutricionista.Designer.cs">
+      <DependentUpon>frmCitasNutricionista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nutricionista\frmBuscarAlumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nutricionista\frmBuscarAlumnos.Designer.cs">
+      <DependentUpon>frmBuscarAlumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nutricionista\frmConsultarCita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nutricionista\frmConsultarCita.Designer.cs">
+      <DependentUpon>frmConsultarCita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nutricionista\frmDescargarHistorialClinico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nutricionista\frmDescargarHistorialClinico.Designer.cs">
+      <DependentUpon>frmDescargarHistorialClinico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nutricionista\frmDescargarPrevio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nutricionista\frmDescargarPrevio.Designer.cs">
+      <DependentUpon>frmDescargarPrevio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nutricionista\frmDisponibilidad2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nutricionista\frmDisponibilidad2.Designer.cs">
+      <DependentUpon>frmDisponibilidad2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nutricionista\frmEditarRecetaPlanAlimentario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nutricionista\frmEditarRecetaPlanAlimentario.Designer.cs">
+      <DependentUpon>frmEditarRecetaPlanAlimentario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nutricionista\frmIndicadoresNutriAl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nutricionista\frmIndicadoresNutriAl.Designer.cs">
+      <DependentUpon>frmIndicadoresNutriAl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nutricionista\frmPerfilAlumnoNutricionista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nutricionista\frmPerfilAlumnoNutricionista.Designer.cs">
+      <DependentUpon>frmPerfilAlumnoNutricionista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nutricionista\frmPerfilNutricionista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nutricionista\frmPerfilNutricionista.Designer.cs">
+      <DependentUpon>frmPerfilNutricionista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nutricionista\frmPlanAlimentarioNutricionista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nutricionista\frmPlanAlimentarioNutricionista.Designer.cs">
+      <DependentUpon>frmPlanAlimentarioNutricionista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nutricionista\frmPrincipalNutricionista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nutricionista\frmPrincipalNutricionista.Designer.cs">
+      <DependentUpon>frmPrincipalNutricionista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\frmElegirVideo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\frmElegirVideo.Designer.cs">
+      <DependentUpon>frmElegirVideo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\frmPerfilAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\frmPerfilAlumno.Designer.cs">
+      <DependentUpon>frmPerfilAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmPrincipalAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmPrincipalAdministrador.Designer.cs">
+      <DependentUpon>frmPrincipalAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmConsultarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmConsultarUsuario.Designer.cs">
+      <DependentUpon>frmConsultarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Enumerados\EDeportes.cs" />
+    <Compile Include="Usuario\frmIniciarSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\frmIniciarSesion.Designer.cs">
+      <DependentUpon>frmIniciarSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\frmRegistrarse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\frmRegistrarse.Designer.cs">
+      <DependentUpon>frmRegistrarse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\frmVerificacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\frmVerificacion.Designer.cs">
+      <DependentUpon>frmVerificacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\frmRegistrarsePaso2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\frmRegistrarsePaso2.Designer.cs">
+      <DependentUpon>frmRegistrarsePaso2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\frmRegistrarsePaso3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\frmRegistrarsePaso3.Designer.cs">
+      <DependentUpon>frmRegistrarsePaso3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\frmRegistrarsePaso4Alumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\frmRegistrarsePaso4Alumno.Designer.cs">
+      <DependentUpon>frmRegistrarsePaso4Alumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\frmRegistrarsePaso4Nutricionista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\frmRegistrarsePaso4Nutricionista.Designer.cs">
+      <DependentUpon>frmRegistrarsePaso4Nutricionista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\frmRegistrarsePaso5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\frmRegistrarsePaso5.Designer.cs">
+      <DependentUpon>frmRegistrarsePaso5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\frmRestablecerContrasena.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\frmRestablecerContrasena.Designer.cs">
+      <DependentUpon>frmRestablecerContrasena.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\frmRestablecerContrasenaPaso3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\frmRestablecerContrasenaPaso3.Designer.cs">
+      <DependentUpon>frmRestablecerContrasenaPaso3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\intCardEventosHoy.cs" />
+    <Compile Include="Nutricionista\frmDashboardNutricionista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nutricionista\frmDashboardNutricionista.Designer.cs">
+      <DependentUpon>frmDashboardNutricionista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Administrador\frmPrincipalAdministrador.resx">
+      <DependentUpon>frmPrincipalAdministrador.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\frmConsultarUsuario.resx">
+      <DependentUpon>frmConsultarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\Citas\frmDetalleCitaProgramada.resx">
+      <DependentUpon>frmDetalleCitaProgramada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\frmHorasSueDashboard.resx">
+      <DependentUpon>frmHorasSueDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\frmIMCDashboard.resx">
+      <DependentUpon>frmIMCDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\Nutricionista\frmDatosIAIncorrectos.resx">
+      <DependentUpon>frmDatosIAIncorrectos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\Nutricionista\frmDetalleReceta.resx">
+      <DependentUpon>frmDetalleReceta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\Nutricionista\frmNoPlanAlimentario.resx">
+      <DependentUpon>frmNoPlanAlimentario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\frmElegirUbicacion.resx">
+      <DependentUpon>frmElegirUbicacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\frmMessageBoxAceptar.resx">
+      <DependentUpon>frmMessageBoxAceptar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\frmMessageBoxSiNo.resx">
+      <DependentUpon>frmMessageBoxSiNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\frmMostrarUbicación.resx">
+      <DependentUpon>frmMostrarUbicación.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ucAlimentoListado.resx">
+      <DependentUpon>ucAlimentoListado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ucCitaHist.resx">
+      <DependentUpon>ucCitaHist.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ucCitaHistNutri.resx">
+      <DependentUpon>ucCitaHistNutri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ucCitaProg.resx">
+      <DependentUpon>ucCitaProg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\Citas\frmCitasAlumno.resx">
+      <DependentUpon>frmCitasAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\Citas\frmDetalleCitaHistorica.resx">
+      <DependentUpon>frmDetalleCitaHistorica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\Citas\frmRegistrarCita1.resx">
+      <DependentUpon>frmRegistrarCita1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\Citas\frmRegistrarCita2.resx">
+      <DependentUpon>frmRegistrarCita2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\Nutricionista\frmAgregarAlimento.resx">
+      <DependentUpon>frmAgregarAlimento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\Nutricionista\frmAlimentoPredilecto.resx">
+      <DependentUpon>frmAlimentoPredilecto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\frmDashboardAlumno.resx">
+      <DependentUpon>frmDashboardAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\frmPrincipalAlumno.resx">
+      <DependentUpon>frmPrincipalAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\Nutricionista\frmIndicadoresDeSalud.resx">
+      <DependentUpon>frmIndicadoresDeSalud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\Nutricionista\frmPlanAlimentario.resx">
+      <DependentUpon>frmPlanAlimentario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\Nutricionista\frmPlanAlimentarioDetalleEdit.resx">
+      <DependentUpon>frmPlanAlimentarioDetalleEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ucCitaProgNutri.resx">
+      <DependentUpon>ucCitaProgNutri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ucFecha.resx">
+      <DependentUpon>ucFecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ucFechaRango.resx">
+      <DependentUpon>ucFechaRango.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ucHistComidas.resx">
+      <DependentUpon>ucHistComidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ucHistComidasTitle.resx">
+      <DependentUpon>ucHistComidasTitle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ucHoraMinAMPM.resx">
+      <DependentUpon>ucHoraMinAMPM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ucMap.resx">
+      <DependentUpon>ucMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ucPlanAlimCardEdit.resx">
+      <DependentUpon>ucPlanAlimCardEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ucSesion.resx">
+      <DependentUpon>ucSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ucWebView.resx">
+      <DependentUpon>ucWebView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ucYouTube.resx">
+      <DependentUpon>ucYouTube.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\Nutricionista\frmConsultarPDF.resx">
+      <DependentUpon>frmConsultarPDF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBienvenido.resx">
+      <DependentUpon>frmBienvenido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nutricionista\frmBuscarAlumnos.resx">
+      <DependentUpon>frmBuscarAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nutricionista\frmCitasNutricionista.resx">
+      <DependentUpon>frmCitasNutricionista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nutricionista\frmConsultarCita.resx">
+      <DependentUpon>frmConsultarCita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nutricionista\frmDescargarHistorialClinico.resx">
+      <DependentUpon>frmDescargarHistorialClinico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nutricionista\frmDescargarPrevio.resx">
+      <DependentUpon>frmDescargarPrevio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nutricionista\frmDisponibilidad2.resx">
+      <DependentUpon>frmDisponibilidad2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nutricionista\frmEditarRecetaPlanAlimentario.resx">
+      <DependentUpon>frmEditarRecetaPlanAlimentario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nutricionista\frmIndicadoresNutriAl.resx">
+      <DependentUpon>frmIndicadoresNutriAl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nutricionista\frmPerfilAlumnoNutricionista.resx">
+      <DependentUpon>frmPerfilAlumnoNutricionista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nutricionista\frmPerfilNutricionista.resx">
+      <DependentUpon>frmPerfilNutricionista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nutricionista\frmPlanAlimentarioNutricionista.resx">
+      <DependentUpon>frmPlanAlimentarioNutricionista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nutricionista\frmPrincipalNutricionista.resx">
+      <DependentUpon>frmPrincipalNutricionista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\frmElegirVideo.resx">
+      <DependentUpon>frmElegirVideo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\frmPerfilAlumno.resx">
+      <DependentUpon>frmPerfilAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nutricionista\frmDashboardNutricionista.resx">
+      <DependentUpon>frmDashboardNutricionista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\frmIniciarSesion.resx">
+      <DependentUpon>frmIniciarSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\frmRegistrarse.resx">
+      <DependentUpon>frmRegistrarse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\frmVerificacion.resx">
+      <DependentUpon>frmVerificacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\frmRegistrarsePaso2.resx">
+      <DependentUpon>frmRegistrarsePaso2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\frmRegistrarsePaso3.resx">
+      <DependentUpon>frmRegistrarsePaso3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\frmRegistrarsePaso4Alumno.resx">
+      <DependentUpon>frmRegistrarsePaso4Alumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\frmRegistrarsePaso4Nutricionista.resx">
+      <DependentUpon>frmRegistrarsePaso4Nutricionista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\frmRegistrarsePaso5.resx">
+      <DependentUpon>frmRegistrarsePaso5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\frmRestablecerContrasena.resx">
+      <DependentUpon>frmRestablecerContrasena.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\frmRestablecerContrasenaPaso3.resx">
+      <DependentUpon>frmRestablecerContrasenaPaso3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Connected Services\AdministradorWS\AdministradorService.wsdl" />
+    <None Include="Connected Services\AdministradorWS\AdministradorService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AdministradorWS\PUCPSaludable.AdministradorWS.changeUserStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdministradorWS\PUCPSaludable.AdministradorWS.deleteRoleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdministradorWS\PUCPSaludable.AdministradorWS.deleteRuleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdministradorWS\PUCPSaludable.AdministradorWS.getRolesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdministradorWS\PUCPSaludable.AdministradorWS.getRulesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdministradorWS\PUCPSaludable.AdministradorWS.getUsersByStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdministradorWS\PUCPSaludable.AdministradorWS.insertRoleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdministradorWS\PUCPSaludable.AdministradorWS.insertRuleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdministradorWS\PUCPSaludable.AdministradorWS.modifyRoleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdministradorWS\PUCPSaludable.AdministradorWS.modifyRuleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdministradorWS\PUCPSaludable.AdministradorWS.noWebServiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdministradorWS\PUCPSaludable.AdministradorWS.regla.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdministradorWS\PUCPSaludable.AdministradorWS.rol.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdministradorWS\PUCPSaludable.AdministradorWS.usuario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlimentoWS\AlimentoWebService.wsdl" />
+    <None Include="Connected Services\AlimentoWS\AlimentoWebService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AlimentoWS\PUCPSaludable.AlimentoWS.adquirirAlimentoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlimentoWS\PUCPSaludable.AlimentoWS.alimento.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlimentoWS\PUCPSaludable.AlimentoWS.eliminarAlimentoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlimentoWS\PUCPSaludable.AlimentoWS.filtrarPorPreferenciaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlimentoWS\PUCPSaludable.AlimentoWS.insertarAlimentoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlimentoWS\PUCPSaludable.AlimentoWS.modificarAlimentoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlumnoWS\Alumno.wsdl" />
+    <None Include="Connected Services\AlumnoWS\Alumno.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AlumnoWS\Alumno1.wsdl" />
+    <None Include="Connected Services\AlumnoWS\Alumno1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AlumnoWS\PUCPSaludable.AlumnoWS.alumno.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlumnoWS\PUCPSaludable.AlumnoWS.generarPlanAlimenticioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlumnoWS\PUCPSaludable.AlumnoWS.listarAlumnoIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlumnoWS\PUCPSaludable.AlumnoWS.listarAlumnoNombreCodigoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlumnoWS\PUCPSaludable.AlumnoWS.listarAlumnoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlumnoWS\PUCPSaludable.AlumnoWS.modificarAlumnoIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutenticacionWS\authentication.wsdl" />
+    <None Include="Connected Services\AutenticacionWS\authentication.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AutenticacionWS\PUCPSaludable.AutenticacionWS.changePasswordResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutenticacionWS\PUCPSaludable.AutenticacionWS.especialidad.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutenticacionWS\PUCPSaludable.AutenticacionWS.getSpecialtiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutenticacionWS\PUCPSaludable.AutenticacionWS.registerAsNutricionistResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutenticacionWS\PUCPSaludable.AutenticacionWS.registerAsStudentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutenticacionWS\PUCPSaludable.AutenticacionWS.sesionActiva.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutenticacionWS\PUCPSaludable.AutenticacionWS.sessionsListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutenticacionWS\PUCPSaludable.AutenticacionWS.signInResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutenticacionWS\PUCPSaludable.AutenticacionWS.signOutResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutenticacionWS\PUCPSaludable.AutenticacionWS.verifyRegisteredUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutenticacionWS\PUCPSaludable.AutenticacionWS.verifySessionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CitasWS\CitasService.wsdl" />
+    <None Include="Connected Services\CitasWS\CitasService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CitasWS\PUCPSaludable.CitasWS.cancelarCitaXAlumnoOEspecialistaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CitasWS\PUCPSaludable.CitasWS.cita.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CitasWS\PUCPSaludable.CitasWS.eliminarCitaxIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CitasWS\PUCPSaludable.CitasWS.getAvailableAppointmentsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CitasWS\PUCPSaludable.CitasWS.getNutritionistsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CitasWS\PUCPSaludable.CitasWS.listarCitaHistoricaNutricionistaPorIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CitasWS\PUCPSaludable.CitasWS.listarCitaHistoricaNutricionistaPorNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CitasWS\PUCPSaludable.CitasWS.listarCitaHistoricaPorIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CitasWS\PUCPSaludable.CitasWS.listarCitaHistoricaPorNombreCodigoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CitasWS\PUCPSaludable.CitasWS.listarCitaProgramadaNutricionistaPorIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CitasWS\PUCPSaludable.CitasWS.listarCitaProgramadaNutricionistaPorNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CitasWS\PUCPSaludable.CitasWS.listarCitaProgramadaPorIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CitasWS\PUCPSaludable.CitasWS.listarCitaProgramadaPorNombreCodigoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CitasWS\PUCPSaludable.CitasWS.modificarCitaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CitasWS\PUCPSaludable.CitasWS.nutricionista.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CitasWS\PUCPSaludable.CitasWS.registerAppointmentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CRutinaWS\CumplimientoRutina.wsdl" />
+    <None Include="Connected Services\CRutinaWS\CumplimientoRutina.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CRutinaWS\PUCPSaludable.CRutinaWS.cumplimientoRutina.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CRutinaWS\PUCPSaludable.CRutinaWS.insertarCumplimientoRutinaAlimentariaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CRutinaWS\PUCPSaludable.CRutinaWS.listarCumplimientoRutinaAlimentariaxAlumnoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CRutinaWS\PUCPSaludable.CRutinaWS.listarCumplimientoRutinaAlimentariaxAlumnoyFechaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CRutinaWS\PUCPSaludable.CRutinaWS.listarPlanAlimentarioNombreRecetasxAlumnoyFechaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CRutinaWS\PUCPSaludable.CRutinaWS.modificarCumplimientoRutinaAlimentariaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EspecialistaWS\Especialista.wsdl" />
+    <None Include="Connected Services\EspecialistaWS\Especialista.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EspecialistaWS\PUCPSaludable.EspecialistaWS.agregarMensajeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EspecialistaWS\PUCPSaludable.EspecialistaWS.agregarVideoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EspecialistaWS\PUCPSaludable.EspecialistaWS.listarMensajesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EspecialistaWS\PUCPSaludable.EspecialistaWS.listarVideosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EspecialistaWS\PUCPSaludable.EspecialistaWS.mensajeEspecialistaPorIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EspecialistaWS\PUCPSaludable.EspecialistaWS.videoEspecialistaPorIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HorarioCitaWS\HorarioCitasService.wsdl" />
+    <None Include="Connected Services\HorarioCitaWS\HorarioCitasService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\HorarioCitaWS\PUCPSaludable.HorarioCitaWS.eliminarHorariosAnterioresResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HorarioCitaWS\PUCPSaludable.HorarioCitaWS.horario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HorarioCitaWS\PUCPSaludable.HorarioCitaWS.insertarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HorarioCitaWS\PUCPSaludable.HorarioCitaWS.listarPorEspecResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HorarioHabitualWS\HorarioHabitual.wsdl" />
+    <None Include="Connected Services\HorarioHabitualWS\HorarioHabitual.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\HorarioHabitualWS\PUCPSaludable.HorarioHabitualWS.horarioHabitual.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HorarioHabitualWS\PUCPSaludable.HorarioHabitualWS.insertarHorarioHabitualResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HorarioHabitualWS\PUCPSaludable.HorarioHabitualWS.modificarHorarioHabitualResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HorarioHabitualWS\PUCPSaludable.HorarioHabitualWS.obtenerHorarioHabitualResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HorasSuenhoWS\HorasSuenhoServices.wsdl" />
+    <None Include="Connected Services\HorasSuenhoWS\HorasSuenhoServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\HorasSuenhoWS\PUCPSaludable.HorasSuenhoWS.eliminarHorasSuenhoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HorasSuenhoWS\PUCPSaludable.HorasSuenhoWS.horasSuenho.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HorasSuenhoWS\PUCPSaludable.HorasSuenhoWS.insertarHorasSuenhoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HorasSuenhoWS\PUCPSaludable.HorasSuenhoWS.listarHorasSuenPorAlumResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HorasSuenhoWS\PUCPSaludable.HorasSuenhoWS.modificarHorasSuenhoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\IndicadorAntropometricoWS\IndicadorAntropoService.wsdl" />
+    <None Include="Connected Services\IndicadorAntropometricoWS\IndicadorAntropoService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\IndicadorAntropometricoWS\PUCPSaludable.IndicadorAntropometricoWS.eliminarIndicadorAntropomResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\IndicadorAntropometricoWS\PUCPSaludable.IndicadorAntropometricoWS.indicadorAntropometrico.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\IndicadorAntropometricoWS\PUCPSaludable.IndicadorAntropometricoWS.insertarIndicadorAntropomResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\IndicadorAntropometricoWS\PUCPSaludable.IndicadorAntropometricoWS.listarIndicadorAntropomPorAlumnoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\IndicadorAntropometricoWS\PUCPSaludable.IndicadorAntropometricoWS.modificarIndicadorAntropomResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\IndicadorSaludWS\IndicadorSaludService.wsdl" />
+    <None Include="Connected Services\IndicadorSaludWS\IndicadorSaludService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\IndicadorSaludWS\PUCPSaludable.IndicadorSaludWS.adquirirIndicadorSaludResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\IndicadorSaludWS\PUCPSaludable.IndicadorSaludWS.indicadorSalud.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\IndicadorSaludWS\PUCPSaludable.IndicadorSaludWS.insertarIndicadorSaludResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\IndicadorSaludWS\PUCPSaludable.IndicadorSaludWS.modificarIndicadorSaludResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\IngredienteWS\IngredienteService.wsdl" />
+    <None Include="Connected Services\IngredienteWS\IngredienteService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\IngredienteWS\PUCPSaludable.IngredienteWS.eliminarIngreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\IngredienteWS\PUCPSaludable.IngredienteWS.ingrediente.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\IngredienteWS\PUCPSaludable.IngredienteWS.insertarIngreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\IngredienteWS\PUCPSaludable.IngredienteWS.listarIngredientesNoClasificadosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\IngredienteWS\PUCPSaludable.IngredienteWS.listarIngredientesNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\IngredienteWS\PUCPSaludable.IngredienteWS.listarIngredientesPrefAlResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\IngredienteWS\PUCPSaludable.IngredienteWS.listarIngredientesPresetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\IngredienteWS\PUCPSaludable.IngredienteWS.listarIngredientesTodosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\IngredienteWS\PUCPSaludable.IngredienteWS.modificarIngreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NutricionistaWS\NutricionistaService.wsdl" />
+    <None Include="Connected Services\NutricionistaWS\NutricionistaService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\NutricionistaWS\PUCPSaludable.NutricionistaWS.listarNutricionistaIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NutricionistaWS\PUCPSaludable.NutricionistaWS.modificarNutricionistaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NutricionistaWS\PUCPSaludable.NutricionistaWS.nutricionista.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PlanAlimentarioWS\PlanAlimentario.wsdl" />
+    <None Include="Connected Services\PlanAlimentarioWS\PlanAlimentario.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PlanAlimentarioWS\PUCPSaludable.PlanAlimentarioWS.eliminarPlanAlimAlumnoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PlanAlimentarioWS\PUCPSaludable.PlanAlimentarioWS.generarIngredientesCompraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PlanAlimentarioWS\PUCPSaludable.PlanAlimentarioWS.generarNuevoPlanAlumnoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PlanAlimentarioWS\PUCPSaludable.PlanAlimentarioWS.ingrediente.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PlanAlimentarioWS\PUCPSaludable.PlanAlimentarioWS.ingredientesPresetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PlanAlimentarioWS\PUCPSaludable.PlanAlimentarioWS.insertarNuevoPlanResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PlanAlimentarioWS\PUCPSaludable.PlanAlimentarioWS.modificarPlanAlumnoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PlanAlimentarioWS\PUCPSaludable.PlanAlimentarioWS.planAlimentario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PlanAlimentarioWS\PUCPSaludable.PlanAlimentarioWS.planAlimentarioAlumnoPresetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PlanAlimentarioWS\PUCPSaludable.PlanAlimentarioWS.planAlimentarioAlumnoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PlanAlimentarioWS\PUCPSaludable.PlanAlimentarioWS.presetReceta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PlanAlimentarioWS\PUCPSaludable.PlanAlimentarioWS.presetsPorTipoCResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PlanAlimentarioWS\PUCPSaludable.PlanAlimentarioWS.receta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PlanAlimentarioWS\PUCPSaludable.PlanAlimentarioWS.recetaPorPresetIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <Content Include="Recursos\Imagenes\TutoBienvenida\02.png" />
+    <Content Include="Recursos\Imagenes\TutoBienvenida\03.png" />
+    <Content Include="Recursos\Imagenes\TutoBienvenida\04.png" />
+    <Content Include="Recursos\Imagenes\TutoBienvenida\05.png" />
+    <Content Include="Recursos\Imagenes\TutoBienvenida\06.png" />
+    <Content Include="Recursos\Imagenes\TutoBienvenida\07.png" />
+    <Content Include="Recursos\Imagenes\TutoBienvenida\08.png" />
+    <Content Include="Recursos\Imagenes\TutoBienvenida\09.png" />
+    <Content Include="Recursos\Imagenes\TutoBienvenida\10.png" />
+    <None Include="PUCPSaludable_TemporaryKey.pfx" />
+    <None Include="Recursos\Imagenes\TutoBienvenida\01.png" />
+    <None Include="Recursos\Iconos\Botones\user.png" />
+    <None Include="Recursos\Iconos\Botones\logout.png" />
+    <None Include="Recursos\Iconos\Botones\Back.png" />
+    <None Include="Recursos\Iconos\Botones\Forward.png" />
+    <None Include="Recursos\Imagenes\Animaciones\Ripple.gif" />
+    <None Include="Recursos\Iconos\Deportes\ajedrez.png" />
+    <None Include="Recursos\Iconos\Deportes\atletismo.png" />
+    <None Include="Recursos\Iconos\Deportes\basquet.png" />
+    <None Include="Recursos\Iconos\Deportes\beisbol.png" />
+    <None Include="Recursos\Iconos\Deportes\futbol.png" />
+    <None Include="Recursos\Iconos\Deportes\futsal.png" />
+    <None Include="Recursos\Iconos\Deportes\gimnasio.png" />
+    <None Include="Recursos\Iconos\Deportes\judo.png" />
+    <None Include="Recursos\Iconos\Deportes\karate.png" />
+    <None Include="Recursos\Iconos\Deportes\paletafronton.png" />
+    <None Include="Recursos\Iconos\Deportes\rugby.png" />
+    <None Include="Recursos\Iconos\Deportes\softbol.png" />
+    <None Include="Recursos\Iconos\Deportes\taekwondo.png" />
+    <None Include="Recursos\Iconos\Deportes\tenismesa.png" />
+    <None Include="Recursos\Iconos\Deportes\voley.png" />
+    <None Include="Recursos\Iconos\Deportes\wushu.png" />
+    <None Include="Connected Services\IngredienteWS\configuration91.svcinfo" />
+    <None Include="Connected Services\IngredienteWS\configuration.svcinfo" />
+    <None Include="Connected Services\IngredienteWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\AlumnoWS\configuration91.svcinfo" />
+    <None Include="Connected Services\AlumnoWS\configuration.svcinfo" />
+    <None Include="Connected Services\AlumnoWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\CitasWS\configuration91.svcinfo" />
+    <None Include="Connected Services\CitasWS\configuration.svcinfo" />
+    <None Include="Connected Services\CitasWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\PlanAlimentarioWS\configuration91.svcinfo" />
+    <None Include="Connected Services\PlanAlimentarioWS\configuration.svcinfo" />
+    <None Include="Connected Services\PlanAlimentarioWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\AdministradorWS\configuration91.svcinfo" />
+    <None Include="Connected Services\AdministradorWS\configuration.svcinfo" />
+    <None Include="Connected Services\AdministradorWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\IndicadorSaludWS\configuration91.svcinfo" />
+    <None Include="Connected Services\IndicadorSaludWS\configuration.svcinfo" />
+    <None Include="Connected Services\IndicadorSaludWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\HorarioHabitualWS\configuration91.svcinfo" />
+    <None Include="Connected Services\HorarioHabitualWS\configuration.svcinfo" />
+    <None Include="Connected Services\HorarioHabitualWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\CRutinaWS\configuration91.svcinfo" />
+    <None Include="Connected Services\CRutinaWS\configuration.svcinfo" />
+    <None Include="Connected Services\CRutinaWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\AlimentoWS\configuration91.svcinfo" />
+    <None Include="Connected Services\AlimentoWS\configuration.svcinfo" />
+    <None Include="Connected Services\AlimentoWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\IndicadorAntropometricoWS\configuration91.svcinfo" />
+    <None Include="Connected Services\IndicadorAntropometricoWS\configuration.svcinfo" />
+    <None Include="Connected Services\IndicadorAntropometricoWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\NutricionistaWS\configuration91.svcinfo" />
+    <None Include="Connected Services\NutricionistaWS\configuration.svcinfo" />
+    <None Include="Connected Services\NutricionistaWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\AutenticacionWS\configuration91.svcinfo" />
+    <None Include="Connected Services\AutenticacionWS\configuration.svcinfo" />
+    <None Include="Connected Services\AutenticacionWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\HorarioCitaWS\configuration91.svcinfo" />
+    <None Include="Connected Services\HorarioCitaWS\configuration.svcinfo" />
+    <None Include="Connected Services\HorarioCitaWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\EspecialistaWS\configuration91.svcinfo" />
+    <None Include="Connected Services\EspecialistaWS\configuration.svcinfo" />
+    <None Include="Connected Services\EspecialistaWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\HorasSuenhoWS\configuration91.svcinfo" />
+    <None Include="Connected Services\HorasSuenhoWS\configuration.svcinfo" />
+    <None Include="Connected Services\HorasSuenhoWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Recursos\Iconos\Botones\arrow-right-up.png" />
+    <None Include="Recursos\Iconos\Botones\arrow-right-up_hover.png" />
+    <Content Include="Recursos\Iconos\Botones\ball_dark.png" />
+    <Content Include="Recursos\Iconos\Botones\cabeza_small_bn.png" />
+    <Content Include="Recursos\Iconos\Botones\calendar_dark.png" />
+    <Content Include="Recursos\Iconos\Botones\Cancel_16x.png" />
+    <Content Include="Recursos\Iconos\Botones\check-one.png" />
+    <Content Include="Recursos\Iconos\Botones\check.png" />
+    <Content Include="Recursos\Iconos\Botones\data-arrival.png" />
+    <Content Include="Recursos\Iconos\Botones\Edit_16x.png" />
+    <Content Include="Recursos\Iconos\Botones\football.png" />
+    <Content Include="Recursos\Iconos\Botones\health_dark.png" />
+    <Content Include="Recursos\Iconos\Botones\house_dark.png" />
+    <Content Include="Recursos\Iconos\Botones\hoy.png" />
+    <Content Include="Recursos\Iconos\Botones\manana.png" />
+    <Content Include="Recursos\Iconos\Botones\manzana_small_bn.png" />
+    <None Include="Recursos\Iconos\Botones\mapa.png" />
+    <Content Include="Recursos\Iconos\Botones\Pronto.png" />
+    <Content Include="Recursos\Iconos\Botones\Remove_16x.png" />
+    <Content Include="Recursos\Iconos\Botones\reports_dark.png" />
+    <Content Include="Recursos\Iconos\Botones\Save_16x.png" />
+    <Content Include="Recursos\Iconos\Botones\uncheck.png" />
+    <None Include="Recursos\Iconos\Deportes\manzana.png" />
+    <Content Include="Recursos\Iconos\favicon.ico" />
+    <None Include="Recursos\Imagenes\Animaciones\Chart.gif" />
+    <None Include="Recursos\Imagenes\Animaciones\Spinner.gif" />
+    <Content Include="Recursos\Iconos\Mapa\aulariocomplejoinnovacion.png" />
+    <Content Include="Recursos\Iconos\Mapa\aulasmultiuso.png" />
+    <Content Include="Recursos\Iconos\Mapa\biblioteca.png" />
+    <Content Include="Recursos\Iconos\Mapa\bolsadetrabajo.png" />
+    <Content Include="Recursos\Iconos\Mapa\capilla.png" />
+    <Content Include="Recursos\Iconos\Mapa\edificioserviciosadministrativos.png" />
+    <Content Include="Recursos\Iconos\Mapa\espaciosculturales.png" />
+    <Content Include="Recursos\Iconos\Mapa\estudiodigital.png" />
+    <Content Include="Recursos\Iconos\Mapa\farmacia.png" />
+    <Content Include="Recursos\Iconos\Mapa\gabinetesarqueologia.png" />
+    <Content Include="Recursos\Iconos\Mapa\mapaasociacion.png" />
+    <Content Include="Recursos\Iconos\Mapa\mapaauditorios.png" />
+    <Content Include="Recursos\Iconos\Mapa\mapaautos.png" />
+    <Content Include="Recursos\Iconos\Mapa\mapabanco.png" />
+    <Content Include="Recursos\Iconos\Mapa\mapabicicleta.png" />
+    <Content Include="Recursos\Iconos\Mapa\mapacafeteria.png" />
+    <Content Include="Recursos\Iconos\Mapa\mapadeportes.png" />
+    <Content Include="Recursos\Iconos\Mapa\mapaemergencia.png" />
+    <Content Include="Recursos\Iconos\Mapa\mapafotocopia.png" />
+    <Content Include="Recursos\Iconos\Mapa\mapalibreria.png" />
+    <Content Include="Recursos\Iconos\Mapa\mapamotos.png" />
+    <Content Include="Recursos\Iconos\Mapa\mapamuseo.png" />
+    <Content Include="Recursos\Iconos\Mapa\mapaparadero.png" />
+    <Content Include="Recursos\Iconos\Mapa\mapatelefono.png" />
+    <Content Include="Recursos\Iconos\Mapa\mapaunidad.png" />
+    <Content Include="Recursos\Iconos\Mapa\mapawifi.png" />
+    <Content Include="Recursos\Iconos\Mapa\oficinaseguros.png" />
+    <Content Include="Recursos\Iconos\Mapa\pointred.png" />
+    <Content Include="Recursos\Iconos\Mapa\pointred2.png" />
+    <Content Include="Recursos\Iconos\Mapa\publicacionesdocencia.png" />
+    <Content Include="Recursos\Iconos\Mapa\salacuna.png" />
+    <Content Include="Recursos\Iconos\Mapa\salalectura.png" />
+    <Content Include="Recursos\Iconos\Mapa\serviciosalud.png" />
+    <Content Include="Recursos\Iconos\Mapa\tesoreria.png" />
+    <Content Include="Recursos\Iconos\Mapa\tinkuy.png" />
+    <Content Include="Recursos\Iconos\Mapa\tramitesdocumentarios.png" />
+    <None Include="Recursos\Imagenes\Logo\LogoPXCP.png" />
+    <Content Include="Recursos\Imagenes\Persona.png" />
+    <Content Include="Recursos\Imagenes\PlatosDeComida\ArrozPolloHuancaina.jpg" />
+    <None Include="Recursos\Imagenes\PlatosDeComida\pexels-alexy-almond-3758053.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\AdministradorWS\" />
+    <WCFMetadataStorage Include="Connected Services\AlimentoWS\" />
+    <WCFMetadataStorage Include="Connected Services\AlumnoWS\" />
+    <WCFMetadataStorage Include="Connected Services\AutenticacionWS\" />
+    <WCFMetadataStorage Include="Connected Services\CitasWS\" />
+    <WCFMetadataStorage Include="Connected Services\CRutinaWS\" />
+    <WCFMetadataStorage Include="Connected Services\EspecialistaWS\" />
+    <WCFMetadataStorage Include="Connected Services\HorarioCitaWS\" />
+    <WCFMetadataStorage Include="Connected Services\HorarioHabitualWS\" />
+    <WCFMetadataStorage Include="Connected Services\HorasSuenhoWS\" />
+    <WCFMetadataStorage Include="Connected Services\IndicadorAntropometricoWS\" />
+    <WCFMetadataStorage Include="Connected Services\IndicadorSaludWS\" />
+    <WCFMetadataStorage Include="Connected Services\IngredienteWS\" />
+    <WCFMetadataStorage Include="Connected Services\NutricionistaWS\" />
+    <WCFMetadataStorage Include="Connected Services\PlanAlimentarioWS\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Web.WebView2.1.0.1020.30\build\Microsoft.Web.WebView2.targets" Condition="Exists('..\packages\Microsoft.Web.WebView2.1.0.1020.30\build\Microsoft.Web.WebView2.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Web.WebView2.1.0.1020.30\build\Microsoft.Web.WebView2.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Web.WebView2.1.0.1020.30\build\Microsoft.Web.WebView2.targets'))" />
+  </Target>
+</Project>

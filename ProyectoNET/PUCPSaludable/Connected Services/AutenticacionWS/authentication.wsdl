@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://services.pucpsaludable.pucp.edu.pe/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="authentication" targetNamespace="http://services.pucpsaludable.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://ws.pucpsaludable.ml:8080/pucpsaludableWebServices/authentication?xsd=1" namespace="http://services.pucpsaludable.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="getSpecialties">
+    <part name="parameters" element="tns:getSpecialties" />
+  </message>
+  <message name="getSpecialtiesResponse">
+    <part name="parameters" element="tns:getSpecialtiesResponse" />
+  </message>
+  <message name="signIn">
+    <part name="parameters" element="tns:signIn" />
+  </message>
+  <message name="signInResponse">
+    <part name="parameters" element="tns:signInResponse" />
+  </message>
+  <message name="sessionsList">
+    <part name="parameters" element="tns:sessionsList" />
+  </message>
+  <message name="sessionsListResponse">
+    <part name="parameters" element="tns:sessionsListResponse" />
+  </message>
+  <message name="verifySession">
+    <part name="parameters" element="tns:verifySession" />
+  </message>
+  <message name="verifySessionResponse">
+    <part name="parameters" element="tns:verifySessionResponse" />
+  </message>
+  <message name="signOut">
+    <part name="parameters" element="tns:signOut" />
+  </message>
+  <message name="signOutResponse">
+    <part name="parameters" element="tns:signOutResponse" />
+  </message>
+  <message name="changePassword">
+    <part name="parameters" element="tns:changePassword" />
+  </message>
+  <message name="changePasswordResponse">
+    <part name="parameters" element="tns:changePasswordResponse" />
+  </message>
+  <message name="registerAsStudent">
+    <part name="parameters" element="tns:registerAsStudent" />
+  </message>
+  <message name="registerAsStudentResponse">
+    <part name="parameters" element="tns:registerAsStudentResponse" />
+  </message>
+  <message name="verifyRegisteredUser">
+    <part name="parameters" element="tns:verifyRegisteredUser" />
+  </message>
+  <message name="verifyRegisteredUserResponse">
+    <part name="parameters" element="tns:verifyRegisteredUserResponse" />
+  </message>
+  <message name="registerAsNutricionist">
+    <part name="parameters" element="tns:registerAsNutricionist" />
+  </message>
+  <message name="registerAsNutricionistResponse">
+    <part name="parameters" element="tns:registerAsNutricionistResponse" />
+  </message>
+  <portType name="Autenticacion">
+    <operation name="getSpecialties">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/Autenticacion/getSpecialtiesRequest" message="tns:getSpecialties" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/Autenticacion/getSpecialtiesResponse" message="tns:getSpecialtiesResponse" />
+    </operation>
+    <operation name="signIn">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/Autenticacion/signInRequest" message="tns:signIn" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/Autenticacion/signInResponse" message="tns:signInResponse" />
+    </operation>
+    <operation name="sessionsList">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/Autenticacion/sessionsListRequest" message="tns:sessionsList" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/Autenticacion/sessionsListResponse" message="tns:sessionsListResponse" />
+    </operation>
+    <operation name="verifySession">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/Autenticacion/verifySessionRequest" message="tns:verifySession" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/Autenticacion/verifySessionResponse" message="tns:verifySessionResponse" />
+    </operation>
+    <operation name="signOut">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/Autenticacion/signOutRequest" message="tns:signOut" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/Autenticacion/signOutResponse" message="tns:signOutResponse" />
+    </operation>
+    <operation name="changePassword">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/Autenticacion/changePasswordRequest" message="tns:changePassword" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/Autenticacion/changePasswordResponse" message="tns:changePasswordResponse" />
+    </operation>
+    <operation name="registerAsStudent">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/Autenticacion/registerAsStudentRequest" message="tns:registerAsStudent" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/Autenticacion/registerAsStudentResponse" message="tns:registerAsStudentResponse" />
+    </operation>
+    <operation name="verifyRegisteredUser">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/Autenticacion/verifyRegisteredUserRequest" message="tns:verifyRegisteredUser" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/Autenticacion/verifyRegisteredUserResponse" message="tns:verifyRegisteredUserResponse" />
+    </operation>
+    <operation name="registerAsNutricionist">
+      <input wsam:Action="http://services.pucpsaludable.pucp.edu.pe/Autenticacion/registerAsNutricionistRequest" message="tns:registerAsNutricionist" />
+      <output wsam:Action="http://services.pucpsaludable.pucp.edu.pe/Autenticacion/registerAsNutricionistResponse" message="tns:registerAsNutricionistResponse" />
+    </operation>
+  </portType>
+  <binding name="AutenticacionPortBinding" type="tns:Autenticacion">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getSpecialties">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="signIn">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="sessionsList">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="verifySession">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="signOut">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="changePassword">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="registerAsStudent">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="verifyRegisteredUser">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="registerAsNutricionist">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="authentication">
+    <port name="AutenticacionPort" binding="tns:AutenticacionPortBinding">
+      <soap:address location="http://ws.pucpsaludable.ml:8080/pucpsaludableWebServices/authentication" />
+    </port>
+  </service>
+</definitions>
