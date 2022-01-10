@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
+  <services>
+    <service name="Autenticacion">
+      <implementation-class>pe.edu.pucp.pucpsaludable.services.Autenticacion</implementation-class>
+    </service>
+    <service name="AlumnoService">
+      <implementation-class>pe.edu.pucp.pucpsaludable.services.AlumnoService</implementation-class>
+    </service>
+    <service name="CitasService">
+      <implementation-class>pe.edu.pucp.pucpsaludable.services.CitasService</implementation-class>
+    </service>
+    <service name="PlanAlimentarioService">
+      <implementation-class>pe.edu.pucp.pucpsaludable.services.PlanAlimentarioService</implementation-class>
+    </service>
+    <service name="AdministradorService">
+      <implementation-class>pe.edu.pucp.pucpsaludable.services.AdministradorService</implementation-class>
+    </service>
+    <service name="IndicadorSaludService">
+      <implementation-class>pe.edu.pucp.pucpsaludable.services.IndicadorSaludService</implementation-class>
+    </service>
+    <service name="HorarioHabitualService">
+      <implementation-class>pe.edu.pucp.pucpsaludable.services.HorarioHabitualService</implementation-class>
+    </service>
+    <service name="CumplimientoRutinaService">
+      <implementation-class>pe.edu.pucp.pucpsaludable.services.CumplimientoRutinaService</implementation-class>
+    </service>
+    <service name="AlimentoWebService">
+      <implementation-class>pe.edu.pucp.pucpsaludable.services.AlimentoWebService</implementation-class>
+    </service>
+    <service name="IndicadorAntropoService">
+      <implementation-class>pe.edu.pucp.pucpsaludable.services.IndicadorAntropoService</implementation-class>
+    </service>
+    <service name="NutricionistaService">
+      <implementation-class>pe.edu.pucp.pucpsaludable.services.NutricionistaService</implementation-class>
+    </service>
+    <service name="EspecialistaService">
+      <implementation-class>pe.edu.pucp.pucpsaludable.services.EspecialistaService</implementation-class>
+    </service>
+    <service name="IngredienteService">
+      <implementation-class>pe.edu.pucp.pucpsaludable.services.IngredienteService</implementation-class>
+    </service>
+    <service name="HorarioCitasService">
+      <implementation-class>pe.edu.pucp.pucpsaludable.services.HorarioCitasService</implementation-class>
+    </service>
+    <service name="HorasSuenhoServices">
+      <implementation-class>pe.edu.pucp.pucpsaludable.services.HorasSuenhoServices</implementation-class>
+    </service>
+  </services>
+  <clients/>
+</jax-ws>

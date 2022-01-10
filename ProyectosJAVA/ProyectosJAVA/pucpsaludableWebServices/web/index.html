@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+    <html lang="es">
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="icon" type="image/vnd.microsoft.icon" href="Images/favicon.ico">
+            <link rel="icon" type="image/png" href="Images/favicon.png" sizes="64x64">
+            <link rel="icon" type="image/svg+xml" href="Images/favicon.svg" sizes="any">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+            <title>PUCP Saludable</title>
+            <style>
+                /* cyrillic-ext */
+                @font-face
+                {
+                    font-family: 'Open Sans';
+                    font-style: normal;
+                    font-weight: 400;
+                    src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFWJ0bbck.woff2) format('woff2');
+                    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+                }
+                /* cyrillic */
+                @font-face
+                {
+                    font-family: 'Open Sans';
+                    font-style: normal;
+                    font-weight: 400;
+                    src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFUZ0bbck.woff2) format('woff2');
+                    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+                }
+                /* greek-ext */
+                @font-face
+                {
+                    font-family: 'Open Sans';
+                    font-style: normal;
+                    font-weight: 400;
+                    src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFWZ0bbck.woff2) format('woff2');
+                    unicode-range: U+1F00-1FFF;
+                }
+                /* greek */
+                @font-face
+                {
+                    font-family: 'Open Sans';
+                    font-style: normal;
+                    font-weight: 400;
+                    src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFVp0bbck.woff2) format('woff2');
+                    unicode-range: U+0370-03FF;
+                }
+                /* vietnamese */
+                @font-face
+                {
+                    font-family: 'Open Sans';
+                    font-style: normal;
+                    font-weight: 400;
+                    src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFWp0bbck.woff2) format('woff2');
+                    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+                }
+                /* latin-ext */
+                @font-face
+                {
+                    font-family: 'Open Sans';
+                    font-style: normal;
+                    font-weight: 400;
+                    src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFW50bbck.woff2) format('woff2');
+                    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+                }
+                /* latin */
+                @font-face
+                {
+                    font-family: 'Open Sans';
+                    font-style: normal;
+                    font-weight: 400;
+                    src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFVZ0b.woff2) format('woff2');
+                    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+                }
+                ::-webkit-scrollbar
+                {
+                    width:8px;
+                    height:8px;
+                }
+                :hover::-webkit-scrollbar
+                {
+                    width:8px;
+                    height:8px;
+                    background:rgba(180,180,180,0.5);
+                }
+                ::-webkit-scrollbar-track
+                {
+                    background:transparent;
+                }
+                ::-webkit-scrollbar-track:hover
+                {
+                    background:rgba(180,180,180,.2);
+                    height:8px;
+                }
+                ::-webkit-scrollbar-thumb{
+                    background:rgba(150,150,150,.5);
+                    border-radius:4px;
+                }
+                ::-webkit-scrollbar-thumb:hover
+                {
+                    background:rgba(100,100,100,.8);
+                }
+            </style>
+        </head>
+    <body>
+        <style>
+            *
+            {
+                margin: 0;
+                padding:0;
+                font-family: 'Open Sans';
+            }
+            body
+            {
+                background: rgb(230, 230, 230);
+            }
+            header
+            {
+                box-shadow: 0 0 20px rgb(100, 100, 100);
+                color: rgb(48, 209, 88);
+                position: fixed;
+                top: 0;
+                width: 100%;
+                z-index: 100;
+            }
+            .logo
+            {
+                background: rgba(255, 255, 255, .7);
+                backdrop-filter: blur(16px);
+            }
+            .logo object
+            {
+                display: block;
+                padding: 10px;
+                height: 50px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .banner
+            {
+                padding: 50px;
+                padding-top: 160px;
+                padding-bottom: 90px;
+/*                background-image: url('Images/banner.jpg');*/
+                background-size: cover;
+            }
+            h1
+            {
+                color: rgb(0, 0, 0);
+                text-shadow: 0 0 20px rgb(255, 255, 255);
+                font-weight: bold;
+                font-size: 32px;
+            }
+            p
+            {
+                font-size: 14px;
+                color: rgb(0, 0, 0);
+                text-shadow: 0 0 10px rgb(255, 255, 255);
+            }
+            .bold
+            {
+                font-weight: bold;
+            }
+            .button
+            {
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 14px;
+                display: inline-block;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                padding: 10px 20px;
+                border: solid 2px rgb(255, 255, 255);
+                border-radius: 8px;
+                color: rgb(255,255,255);
+                background: rgb(0, 0, 0);
+            }
+            .button:hover
+            {
+                background: rgb(30, 30, 30);
+            }
+            .content-parent
+            {
+                position: relative;
+                background: rgb(230, 230, 230);
+            }
+            .content-child
+            {
+                padding: 20px;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 800px;
+                text-align: justify;
+            }
+
+            #backToTop
+            {
+                display: none;
+                position: fixed;
+                z-index: 100;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                padding: 10px 20px;
+                border-radius: 20px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 14px;
+                backdrop-filter: blur(16px);
+                color: rgb(0, 0, 0);
+                box-shadow: 0 0 20px rgb(100 100 100);
+            }
+            #backToTop:hover
+            {
+                background-color: rgb(0, 0, 0);
+                color: rgb(255, 255, 255);
+            }
+            .banner_video
+            {
+                position: fixed;
+                top: 0;
+            }
+            .systemreq a
+            {
+                font-size: 12px;
+                text-decoration: none;
+            }
+            .systemreq li
+            {
+                color: #333;
+                font-size: 14px;
+                font-weight: bold;
+            }
+            .systemreq p
+            {
+                color: #777;
+                font-size: 12px;
+            }
+            .systemreq span
+            {
+                display: block;
+                padding-top: 10px;
+            }
+            @media (min-width: 991px)
+            {
+                .banner_video
+                {
+                    width: 100%;
+                }
+            }
+            @media (max-width: 990px)
+            {
+                .banner_video
+                {
+                    height: 540px;
+                }
+            }
+        </style>
+        <header>
+            <div class="logo">
+                <object class="animate__animated animate__slower animate__pulse animate__repeat-3" data="Images/favicon.svg"> </object>
+            </div>
+        </header>
+        <main class="animate__animated animate__slideInDown">
+            <video class="banner_video" autoplay muted>
+                <source src="Videos/banner.mp4" type="video/mp4">
+                Video no soportado
+            </video>
+        <div class="banner">
+                <h1 class="animate__animated animate__zoomInUp">Descarga PUCP Saludable</h1>
+                </br>
+                <p class="bold animate__animated animate__zoomInUp">Gracias por apostar por tu salud!</p>
+                <p class="animate__animated animate__zoomInUp"><span style="display: block;">PUCP Saludable será tu aliado en alimentación y actividad física,</span><span>y te ayudará a alcanzar ese cambio tan anhelado.</span></p>
+                </br>
+            <a class="button animate__animated animate__zoomInUp" href="App/setup.exe" download>Descarga PUCP Saludable</a>
+                </br>
+                </br>
+                </br>
+                <p class="animate__animated animate__zoomInUp">En la sección inferior encontrarás instrucciones para la instalación</p>
+            </div>
+            <div class="content-parent">
+                <div class="content-child">
+                    <h2>Instalación</h2>
+                </br>
+                    <h3>Requisitos mínimos del sistema</h3>
+                    <ul class="systemreq">
+                        <span>
+                            <li>Sistema operativo Microsoft Windows 7 o superior con Microsoft Edge WebView2 Runtime</li>
+                            <p>WebView2 Runtime se incluye por defecto a partir de la versión 21H1 de Windows 10 y ordenadores que tienen instaladas las app de Microsoft 365. Para versiones anteriores debe descargar e instalar Microsoft Edge WebView2 Runtime.</p>
+                            <a href="https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section">Descarga Edge WebView2 Runtime desde la web de Microsoft</a>    
+                        </span>
+                        <span>
+                            <li>Microsoft .NET Framework 4.8 Runtime o superior</li>
+                            <a href="https://dotnet.microsoft.com/download/dotnet-framework/net48">Descarga .NET Framework 4.8 Runtime desde la web de Microsoft</a>
+                        </span>
+                    </ul>
+                </div>
+            </div>
+        </main>
+        <a class="animate__animated animate__faster animate__slideInUp" onclick="topFunction()" id="backToTop" title="Volver arriba">Volver arriba</a>
+        <script>
+            btt = document.getElementById("backToTop");
+            window.onscroll = function()
+            {
+                scrollFunction()
+            };
+            function scrollFunction()
+            {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)
+                {
+                    btt.style.display = "block";
+                }
+                else
+                {
+                    btt.style.display = "none";
+                }
+            }
+            function topFunction()
+            {
+                document.getElementsByTagName("main")[0].classList.remove("animate__slideInDown");
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+                document.getElementsByTagName("main")[0].classList.add("animate__slideInDown");
+            }
+        </script>
+        <script>
+            window.watsonAssistantChatOptions = {
+                integrationID: "a70ea90c-3398-4249-a5dd-4417b7486f60",
+                region: "es-pe",
+                serviceInstanceID: "98f295c6-7f79-41a0-b4cf-c9c0eb76ea8e",
+                onLoad: function(instance) { instance.render(); }
+            };
+            setTimeout(function(){
+                const t=document.createElement('script');
+                t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+                document.head.appendChild(t);
+            });
+    	</script>
+    </body>
+</html>
